@@ -23,6 +23,7 @@ Five timed sprints. Each one: a 1–1.5 minute briefing, a 3–5 minute work per
 
 | Time | Segment | Checkpoint to reveal |
 |---|---|---|
+| Arrival | "Before We Start" slide: pre-workshop survey on phones, sign in on laptops | |
 | 0:00–4:00 | Welcome, how today works, the workbook | |
 | 4:00–9:00 | Pre-flight: open link, make a copy, duplicate tab | Everyone has `Working` |
 | 9:00–14:00 | Sprint 1 · Survey the scene | Clues from the room |
@@ -30,7 +31,7 @@ Five timed sprints. Each one: a 1–1.5 minute briefing, a 3–5 minute work per
 | 21:00–28:00 | Sprint 3 · Hidden characters | 63 titles changed |
 | 28:00–35:00 | Sprint 4 · Unmask the aliases | 0 CHECK · 15 broadcasters · WDR 238 |
 | 35:00–42:00 | Sprint 5 · Time of the crime | 5 impossible dates · first real date 29 Nov 1970 |
-| 42:00–45:00 | What's left, habits, exit ticket | |
+| 42:00–45:00 | What's left, habits, post-workshop survey, exit ticket | |
 
 **If you're running late:** skip the Sprint 1 checkpoint reveal (say the clues yourself in 20 seconds) and shorten Sprint 5 to the `Date_Check` count. Never cut the pre-flight: everything depends on it.
 
@@ -48,7 +49,7 @@ Five timed sprints. Each one: a 1–1.5 minute briefing, a 3–5 minute work per
 
 []{.box} **Test the formula copy routine** once in the browser you'll present from (Formulas sheet → formula bar → Ctrl/⌘ + A, C → Esc → target cell → Ctrl/⌘ + V). If pasting gives text instead of a formula, tell students to click into the formula bar of the target cell before pasting.
 
-[]{.box} **Print** one Evidence Card per student (1 page) and a few cheat sheets. The On Your Own guide is for afterwards: share the link, no need to print.
+[]{.box} **Print** one Evidence Card per student, **double-sided** (the back has the survey QR codes and the exit ticket), and a few cheat sheets. The On Your Own guide is for afterwards: share the link, no need to print.
 
 []{.box} **Open** `Slides.html` in a browser, full screen. Press **S** for speaker view.
 
@@ -75,7 +76,17 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 ## Slide-by-Slide Notes
 
 ::: {.note-slide}
-### <span class="num">2</span> Sonntag, 20:15 Uhr
+### <span class="num">2</span> Before We Start
+
+**Before 0:00 · On screen as people arrive**
+
+- Leave this slide up while people come in, so the pre-workshop survey is done before any teaching starts.
+- Phones for the survey, laptops for office.com. Both can happen at once.
+- Start the clock when you move to the next slide.
+:::
+
+::: {.note-slide}
+### <span class="num">3</span> Sonntag, 20:15 Uhr
 
 **0:00–2:00 · Welcome + hook**
 
@@ -86,7 +97,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">3</span> How Today Works
+### <span class="num">4</span> How Today Works
 
 **2:00–3:00 · How today works**
 
@@ -96,7 +107,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">4</span> Meet the Evidence
+### <span class="num">5</span> Meet the Evidence
 
 **3:00–4:00 · Tour of the workbook**
 
@@ -106,7 +117,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">5</span> Pre-flight 
+### <span class="num">6</span> Pre-flight 
 
 **4:00–9:00 · Pre-flight (4-min timer + 1 min slack)**
 
@@ -118,7 +129,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">6</span> Sprint 1 · Look Before You Touch
+### <span class="num">7</span> Sprint 1 · Look Before You Touch
 
 **9:00–10:00 · Briefing (1 min)**
 
@@ -127,7 +138,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">7</span> Sprint 1: Survey the Scene 
+### <span class="num">8</span> Sprint 1: Survey the Scene 
 
 **10:00–13:00 · Work (3 min)**
 
@@ -136,7 +147,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">8</span> Checkpoint 1 
+### <span class="num">9</span> Checkpoint 1 
 
 **13:00–14:00 · Checkpoint (1 min)**
 
@@ -145,7 +156,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">9</span> Sprint 2 · Clear the Scene
+### <span class="num">10</span> Sprint 2 · Clear the Scene
 
 **14:00–15:30 · Briefing (1.5 min)**
 
@@ -155,7 +166,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">10</span> Sprint 2: Clear the Scene 
+### <span class="num">11</span> Sprint 2: Clear the Scene 
 
 **15:30–20:30 · Work (5 min)**
 
@@ -165,7 +176,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">11</span> Checkpoint 2 
+### <span class="num">12</span> Checkpoint 2 
 
 **20:30–21:00 · Checkpoint (30 s)**
 
@@ -174,7 +185,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">12</span> Sprint 3 · Hidden Characters
+### <span class="num">13</span> Sprint 3 · Hidden Characters
 
 **21:00–22:30 · Briefing + the one demo that matters (1.5 min)**
 
@@ -184,7 +195,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">13</span> Sprint 3: Hidden Characters 
+### <span class="num">14</span> Sprint 3: Hidden Characters 
 
 **22:30–27:30 · Work (5 min)**
 
@@ -194,7 +205,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">14</span> Checkpoint 3 
+### <span class="num">15</span> Checkpoint 3 
 
 **27:30–28:00 · Checkpoint (30 s)**
 
@@ -203,7 +214,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">15</span> Sprint 4 · Unmask the Aliases
+### <span class="num">16</span> Sprint 4 · Unmask the Aliases
 
 **28:00–29:30 · Briefing (1.5 min)**
 
@@ -214,7 +225,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">16</span> Sprint 4: Unmask the Aliases 
+### <span class="num">17</span> Sprint 4: Unmask the Aliases 
 
 **29:30–34:30 · Work (5 min)**
 
@@ -224,7 +235,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">17</span> Checkpoint 4 
+### <span class="num">18</span> Checkpoint 4 
 
 **34:30–35:00 · Checkpoint (30 s)**
 
@@ -233,7 +244,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">18</span> Sprint 5 · Time of the Crime
+### <span class="num">19</span> Sprint 5 · Time of the Crime
 
 **35:00–36:30 · Briefing (1.5 min)**
 
@@ -244,7 +255,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">19</span> Sprint 5: Time of the Crime 
+### <span class="num">20</span> Sprint 5: Time of the Crime 
 
 **36:30–41:30 · Work (5 min)**
 
@@ -254,7 +265,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">20</span> Checkpoint 5 
+### <span class="num">21</span> Checkpoint 5 
 
 **41:30–42:00 · Checkpoint (30 s)**
 
@@ -262,7 +273,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">21</span> Case Not Closed (Yet)
+### <span class="num">22</span> Case Not Closed (Yet)
 
 **42:00–43:00 · What's left**
 
@@ -271,7 +282,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">22</span> Good Habits
+### <span class="num">23</span> Good Habits
 
 **43:00–44:00 · Wrap-up**
 
@@ -279,10 +290,11 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">23</span> Before You Go 
+### <span class="num">24</span> Before You Go 
 
-**44:00–45:00 · Exit ticket**
+**44:00–45:00 · Post-workshop survey + exit ticket**
 
-- Collect the cards at the door. They tell you what stuck and what to fix next time.
-- Remind people the guide and cheat sheet are in the repo, CC BY 4.0.
+- Give people a minute with their phones before they pack up. Surveys done after people leave rarely get done.
+- The survey links are also on the back of the Evidence Card, so anyone who has to rush out can do it later.
+- If you collect the cards for the exit ticket, people lose the printed survey link. Either let them keep the card, or make sure they scan the code before handing it in.
 :::

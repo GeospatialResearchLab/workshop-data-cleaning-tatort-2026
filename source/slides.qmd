@@ -20,6 +20,41 @@ format:
       data-background-color: "#141414"
 ---
 
+## Before We Start
+
+:::: {.columns}
+::: {.column width="62%"}
+While everyone settles in, two quick things:
+
+::: {.action}
+**On your phone:** scan the code for the pre-workshop survey. It takes a minute or two.
+:::
+
+::: {.action}
+**On your laptop:** sign in at **office.com** with your university account and open Excel.
+:::
+
+::: {.small .muted}
+No phone? The survey link is also on the back of your Evidence Card: forms.cloud.microsoft/r/yXhf9PuJ0n
+:::
+:::
+::: {.column width="38%"}
+::: {.qr}
+![](theme/img/survey_pre.png)
+
+Pre-workshop survey
+:::
+:::
+::::
+
+::: notes
+**Before 0:00 · On screen as people arrive**
+
+- Leave this slide up while people come in, so the pre-workshop survey is done before any teaching starts.
+- Phones for the survey, laptops for office.com. Both can happen at once.
+- Start the clock when you move to the next slide.
+:::
+
 ## Sonntag, 20:15 Uhr
 
 Since **29 November 1970**, Germany has settled in on Sunday nights for *Tatort* ("crime scene"), the longest-running crime drama on German-language TV.
@@ -464,23 +499,33 @@ You cleaned the four biggest leads. The **On Your Own** guide walks through the 
 
 ## Before You Go {.your-turn}
 
-At the bottom of your Evidence Card:
-
+:::: {.columns}
+::: {.column width="62%"}
 ::: {.action}
-**One** technique from today you'll use on your own data, and *which* data.
+**Scan the code** for the post-workshop survey. It's short, and it tells us what to improve.
 :::
 
 ::: {.action}
-**One** thing that's still a mystery.
+On the back of your Evidence Card: **one** technique from today you'll use on your own data, and **one** thing that's still a mystery.
 :::
 
 ::: {.small .muted}
-Materials, the On Your Own guide and the cheat sheet: see the link on your Evidence Card. Questions? Fragen?
+Survey link: forms.cloud.microsoft/r/kHFPesD57m. Materials, the On Your Own guide and the cheat sheet are on the workshop page. Questions? Fragen?
 :::
+:::
+::: {.column width="38%"}
+::: {.qr}
+![](theme/img/survey_post.png)
+
+Post-workshop survey
+:::
+:::
+::::
 
 ::: notes
-**44:00–45:00 · Exit ticket**
+**44:00–45:00 · Post-workshop survey + exit ticket**
 
-- Collect the cards at the door. They tell you what stuck and what to fix next time.
-- Remind people the guide and cheat sheet are in the repo, CC BY 4.0.
+- Give people a minute with their phones before they pack up. Surveys done after people leave rarely get done.
+- The survey links are also on the back of the Evidence Card, so anyone who has to rush out can do it later.
+- If you collect the cards for the exit ticket, people lose the printed survey link. Either let them keep the card, or make sure they scan the code before handing it in.
 :::

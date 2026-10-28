@@ -22,3 +22,13 @@ body { font-size: 10.8pt; line-height: 1.36; }
 .exit .line { display: block; width: 100%; height: 1.45em; }
 .exit p { margin: .3em 0; }
 .blank.link { width: 15em; }
+
+.pagebreak { break-before: page; }
+.surveys { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2em; margin: .6em 0 1.2em; }
+.survey { border: 1.5px solid var(--ink); border-top: 8px solid var(--tape); padding: .8em .9em 1em; text-align: center; }
+.survey img { width: 2.6in; height: 2.6in; display: block; margin: 0 auto .4em; image-rendering: pixelated; }
+.survey h3 { font-family: "Special Elite", "Courier New", monospace; font-weight: 400; text-transform: uppercase; font-size: 13pt; margin: .2em 0 .3em; }
+.survey p { font-size: 10pt; margin: .2em 0; }
+.exit { margin-top: 1em; padding: .6em .9em .9em; font-size: 11pt; }
+.exit h3 { font-size: 12pt; }
+.exit .line { height: 2em; }
