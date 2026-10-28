@@ -9,7 +9,7 @@
 
 ## Abstract
 
-Every messy spreadsheet is a crime scene. In this fast-paced, hands-on workshop you'll investigate one: a corrupted export of every episode of *Tatort*, Germany's longest-running crime drama. In five short sprints you'll secure the evidence, survey the scene for clues, clear out junk and duplicate records, expose invisible characters, unmask broadcasters hiding behind aliases with a reference table, and rescue dates stored in four different disguises. All of it happens in Excel for the web, so everyone sees the same screen. No prior Excel experience beyond the basics is required. You'll leave with a repeatable investigative workflow, a cheat sheet, and a step-by-step guide to closing the rest of the case on your own.
+Every messy spreadsheet is a crime scene. In this hands-on workshop you'll investigate one: a corrupted export of every episode of *Tatort*, Germany's longest-running crime drama. In five timed sprints you'll clear out duplicate rows and hidden characters, then use a reference table to standardize broadcaster names and rebuild dates that were stored as text. Everything happens in Excel for the web, so everyone sees the same screen, and every formula is provided. You only need basic Excel. The steps we don't reach in the room are written up in a guide you can finish on your own.
 
 ---
 

@@ -90,8 +90,8 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 
 **2:00–3:00 · How today works**
 
-- This is the contract with the room. Short briefings, then they work on their own while the timer runs. When the timer hits zero, we all compare numbers and move on together, wherever you are.
-- Stress the catch-up sheets: nobody is left behind for more than one sprint. Falling behind is normal, not failure.
+- This slide sets the routine for the session. Short briefings, then they work on their own while the timer runs. When the timer hits zero, we all compare numbers and move on together, wherever you are.
+- Point out the catch-up sheets: nobody falls more than one sprint behind. Make it clear that switching to a catch-up sheet is expected.
 - Some of the case is left for later. The "On Your Own" guide documents every remaining step.
 :::
 
@@ -122,7 +122,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 
 **9:00–10:00 · Briefing (1 min)**
 
-- [DEMO, 30 s] Data → Filter, open the `Sender` drop-down: `wdr`, `W.D.R.`, `Westdeutscher Rundfunk`… That's the moment that sells filters.
+- [DEMO, 30 s] Data → Filter, open the `Sender` drop-down: `wdr`, `W.D.R.`, `Westdeutscher Rundfunk`… This usually convinces people that filters are worth using.
 - Don't fix anything in this sprint. Just look.
 :::
 
@@ -150,7 +150,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 **14:00–15:30 · Briefing (1.5 min)**
 
 - Why title rows matter: they break filters, tables and pivot tables.
-- Why a Table: from Sprint 3 on, every formula fills down the whole column by itself. That's what makes this doable in 45 minutes.
+- Why a Table: from Sprint 3 on, every formula fills down the whole column by itself, which saves a lot of time in a 45-minute session.
 - Remove Duplicates with all columns = only rows identical in every cell. Choosing fewer columns is a judgement call about what "the same record" means.
 :::
 
@@ -210,7 +210,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 - Read XLOOKUP aloud in plain English: "look up this broadcaster in column A of Known_Aliases and bring back its code from column B; if it isn't there, write CHECK."
 - XLOOKUP ignores capitalisation, so `wdr` matches `WDR`. That's why the alias list doesn't need every case variant.
 - The empty arguments (`, , , ,`) skip options we don't need. The last one says "if there's no slash, use the whole cell". They'll copy it, not type it.
-- The reference-table idea is the most transferable skill of the night: majors, country names, department codes, survey answers…
+- Reference tables are useful well beyond this dataset: majors, country names, department codes, survey answers…
 :::
 
 ::: {.note-slide}
@@ -240,7 +240,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 - Excel stores dates as numbers: days since 1900. So `25901` is 29 November 1970, the very first Tatort.
 - DATEVALUE guesses using the computer's regional settings; DATE never guesses.
 - The formula on the Formulas sheet uses LET: `d` is a nickname for the date cell so it doesn't have to be repeated. Read it aloud: already a date? keep it. Third character a dot? German. Otherwise ISO.
-- Plausibility checks are the habit: you can't always know the right value, but you can know an impossible one. Don't guess a fix; flag it.
+- Plausibility checks: you can't always know the right value, but you can tell when a value is impossible. Flag it rather than guessing a fix.
 :::
 
 ::: {.note-slide}
@@ -258,7 +258,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 
 **41:30–42:00 · Checkpoint (30 s)**
 
-- If the first date is in 1907 or 1958, they sorted before filtering out the CHECK rows. That's the point: the impossible ones float to the top.
+- If the first date is in 1907 or 1958, they sorted before filtering out the CHECK rows. Sorting puts the impossible dates at the top, which is why it's a useful check.
 :::
 
 ::: {.note-slide}

@@ -1101,8 +1101,8 @@ display:block!important;
 <aside class="notes">
 <p><strong>2:00–3:00 · How today works</strong></p>
 <ul>
-<li>This is the contract with the room. Short briefings, then they work on their own while the timer runs. When the timer hits zero, we all compare numbers and move on together, wherever you are.</li>
-<li>Stress the catch-up sheets: nobody is left behind for more than one sprint. Falling behind is normal, not failure.</li>
+<li>This slide sets the routine for the session. Short briefings, then they work on their own while the timer runs. When the timer hits zero, we all compare numbers and move on together, wherever you are.</li>
+<li>Point out the catch-up sheets: nobody falls more than one sprint behind. Make it clear that switching to a catch-up sheet is expected.</li>
 <li>Some of the case is left for later. The “On Your Own” guide documents every remaining step.</li>
 </ul>
 <style type="text/css">
@@ -1137,7 +1137,7 @@ display:block!important;
 </tr>
 <tr class="even">
 <td><code>Formulas</code></td>
-<td><strong>Every formula for today</strong>, ready to copy. No typing marathons.</td>
+<td>Every formula for today, ready to copy</td>
 </tr>
 <tr class="odd">
 <td><code>Known_Aliases</code></td>
@@ -1222,7 +1222,7 @@ display:block!important;
 <aside class="notes">
 <p><strong>9:00–10:00 · Briefing (1 min)</strong></p>
 <ul>
-<li>[DEMO, 30 s] Data → Filter, open the <code>Sender</code> drop-down: <code>wdr</code>, <code>W.D.R.</code>, <code>Westdeutscher Rundfunk</code>… That’s the moment that sells filters.</li>
+<li>[DEMO, 30 s] Data → Filter, open the <code>Sender</code> drop-down: <code>wdr</code>, <code>W.D.R.</code>, <code>Westdeutscher Rundfunk</code>… This usually convinces people that filters are worth using.</li>
 <li>Don’t fix anything in this sprint. Just look.</li>
 </ul>
 <style type="text/css">
@@ -1309,7 +1309,7 @@ display:block!important;
 <p><strong>14:00–15:30 · Briefing (1.5 min)</strong></p>
 <ul>
 <li>Why title rows matter: they break filters, tables and pivot tables.</li>
-<li>Why a Table: from Sprint 3 on, every formula fills down the whole column by itself. That’s what makes this doable in 45 minutes.</li>
+<li>Why a Table: from Sprint 3 on, every formula fills down the whole column by itself, which saves a lot of time in a 45-minute session.</li>
 <li>Remove Duplicates with all columns = only rows identical in every cell. Choosing fewer columns is a judgement call about what “the same record” means.</li>
 </ul>
 <style type="text/css">
@@ -1360,7 +1360,7 @@ display:block!important;
 <h2>Checkpoint 2</h2>
 <div class="cp-grid" style="--n:3">
 <p><span class="cp"><span class="q">Duplicates removed</span><span class="a">22</span><span class="n">Got 0? You removed duplicates before deleting <code>Import_ID</code>.</span></span></p>
-<p><span class="cp"><span class="q">Rows left</span><span class="a">1,317</span><span class="n">Episodes go to 1,311. Six more hide in plain sight: On Your Own, Lead B.</span></span></p>
+<p><span class="cp"><span class="q">Rows left</span><span class="a">1,317</span><span class="n">Episodes only go to 1,311, so six duplicates are still in there. See the On Your Own guide, Lead B.</span></span></p>
 <p><span class="cp"><span class="q">Table?</span><span class="a">✓</span><span class="n">Click in the data: a <strong>Table Design</strong> tab appears.</span></span></p>
 </div>
 <p><span class="behind">Behind? Use the <strong><code>Catch_Up_2</code></strong> tab from here on.</span></p>
@@ -1484,7 +1484,7 @@ display:block!important;
 <li>Read XLOOKUP aloud in plain English: “look up this broadcaster in column A of Known_Aliases and bring back its code from column B; if it isn’t there, write CHECK.”</li>
 <li>XLOOKUP ignores capitalisation, so <code>wdr</code> matches <code>WDR</code>. That’s why the alias list doesn’t need every case variant.</li>
 <li>The empty arguments (<code>, , , ,</code>) skip options we don’t need. The last one says “if there’s no slash, use the whole cell”. They’ll copy it, not type it.</li>
-<li>The reference-table idea is the most transferable skill of the night: majors, country names, department codes, survey answers…</li>
+<li>Reference tables are useful well beyond this dataset: majors, country names, department codes, survey answers…</li>
 </ul>
 <style type="text/css">
 span.MJX_Assistive_MathML {
@@ -1583,14 +1583,14 @@ display:block!important;
 </tr>
 </tbody>
 </table>
-<p><code>DATE(year, month, day)</code> rebuilds text dates and <strong>never guesses</strong> your region. Then check: Tatort began <strong>29 Nov 1970</strong>. Earlier, or in the future? <strong>Impossible.</strong></p>
+<p><code>DATE(year, month, day)</code> rebuilds text dates and <strong>never guesses</strong> your region. Then check: Tatort began on <strong>29 Nov 1970</strong>, so any earlier or future date is impossible.</p>
 <aside class="notes">
 <p><strong>35:00–36:30 · Briefing (1.5 min)</strong></p>
 <ul>
 <li>Excel stores dates as numbers: days since 1900. So <code>25901</code> is 29 November 1970, the very first Tatort.</li>
 <li>DATEVALUE guesses using the computer’s regional settings; DATE never guesses.</li>
 <li>The formula on the Formulas sheet uses LET: <code>d</code> is a nickname for the date cell so it doesn’t have to be repeated. Read it aloud: already a date? keep it. Third character a dot? German. Otherwise ISO.</li>
-<li>Plausibility checks are the habit: you can’t always know the right value, but you can know an impossible one. Don’t guess a fix; flag it.</li>
+<li>Plausibility checks: you can’t always know the right value, but you can tell when a value is impossible. Flag it rather than guessing a fix.</li>
 </ul>
 <style type="text/css">
 span.MJX_Assistive_MathML {
@@ -1639,13 +1639,13 @@ display:block!important;
 <h2>Checkpoint 5</h2>
 <div class="cp-grid" style="--n:3">
 <p><span class="cp"><span class="q">Impossible dates</span><span class="a">5</span><span class="n">1907, 1958, 2030, 2091 and… 3799. Flag them; don’t guess.</span></span></p>
-<p><span class="cp"><span class="q">First real date</span><span class="a">29 Nov 1970</span><span class="n">Folge 1, <em>Taxi nach Leipzig</em>. The case holds up.</span></span></p>
+<p><span class="cp"><span class="q">First real date</span><span class="a">29 Nov 1970</span><span class="n">Folge 1, <em>Taxi nach Leipzig</em>, the first episode.</span></span></p>
 <p><span class="cp"><span class="q">Text dates rescued</span><span class="a">106</span><span class="n">71 German + 35 ISO, plus 20 real dates that were only shown as numbers.</span></span></p>
 </div>
 <aside class="notes">
 <p><strong>41:30–42:00 · Checkpoint (30 s)</strong></p>
 <ul>
-<li>If the first date is in 1907 or 1958, they sorted before filtering out the CHECK rows. That’s the point: the impossible ones float to the top.</li>
+<li>If the first date is in 1907 or 1958, they sorted before filtering out the CHECK rows. Sorting puts the impossible dates at the top, which is why it’s a useful check.</li>
 </ul>
 <style type="text/css">
 span.MJX_Assistive_MathML {
@@ -1699,7 +1699,7 @@ display:block!important;
 <li><strong>Secure the scene</strong>: raw data is read-only</li>
 <li><strong>Look before you touch</strong>, and write down what you see</li>
 <li><strong>Clean in helper columns</strong>, compare, then swap in</li>
-<li><strong>Don’t trust what Excel shows you</strong>: trust <code>LEN</code>, filters and the formula bar</li>
+<li><strong>Don’t trust what Excel shows you</strong>: check with <code>LEN</code> and the formula bar</li>
 <li><strong>Don’t guess</strong>: flag what you can’t verify</li>
 <li><strong>Document everything</strong>: the Case Log is part of the evidence</li>
 </ul>

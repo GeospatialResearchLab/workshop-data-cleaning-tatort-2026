@@ -14,7 +14,7 @@ format:
 
 # On Your Own: Closing the Case
 
-[In the workshop you cleared the scene, exposed hidden characters, unmasked the broadcasters and rescued the dates. These leads finish the job. Each takes 3–5 minutes, and each tells you the number to expect, so you can check your own work.]{.sub}
+[In the workshop you cleared the scene, exposed hidden characters, unmasked the broadcasters and rescued the dates. The leads below cover the rest. Each takes 3–5 minutes and gives the number to expect, so you can check your own work.]{.sub}
 :::
 
 ## Before You Start
@@ -145,7 +145,7 @@ Gastauftritt:     =IFERROR(TRIM(SUBSTITUTE(TEXTAFTER([@Ermittler], "(Gastauftrit
 []{.box} Count the guest appearances: filter `Gastauftritt` and untick **(Blanks)**, or in `Case_Log` use `=COUNTIF(Working!X:X, "?*")` with your `Gastauftritt` column's letter instead of `X`. You should find **78**.
 
 ::: {.clue}
-Only **77**? One record is written differently. Find it by filtering `Ermittler` for text containing `Gastauftritt` and comparing with your new column. Fix it by hand and log it. Real data is full of one-offs like this.
+Only **77**? One record is written differently. Find it by filtering `Ermittler` for text containing `Gastauftritt` and comparing with your new column. Fix it by hand and log it.
 :::
 
 ## Lead H · Cross-Examine with a PivotTable
