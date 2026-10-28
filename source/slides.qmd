@@ -171,7 +171,7 @@ Today we chase the first four. The rest are in the **On Your Own** guide.
 
 ## [Sprint 2]{.tag} Clear the Scene
 
-- Row 1 **is** the header: delete the title rows above it
+- The header (the column names) belongs in row 1. Here it's in row 4, so delete the title rows above it
 - Headers: short, unique, no stray spaces or ALL CAPS (match the `Data_Dictionary`)
 - Delete columns you don't need
 - **Insert → Table**: new formulas fill the whole column automatically
@@ -194,7 +194,7 @@ Same title ≠ duplicate. *Die Abrechnung* is the title of three different episo
 [⏱ 5 min]{.timer-static}
 
 ::: {.action}
-Select `A1:A3` → right-click → **Delete → Row**. Delete columns `Import_ID`, `Bearbeitet_von`, `Spalte1`.
+The header is in row 4: select `A1:A3` → right-click → **Delete → Row** to remove the three rows above it. Delete columns `Import_ID`, `Bearbeitet_von`, `Spalte1`.
 :::
 
 ::: {.action}
