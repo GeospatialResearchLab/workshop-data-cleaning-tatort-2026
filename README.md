@@ -48,7 +48,7 @@ It is a companion to [*Tatort: Excel* (Excel for the web, self-paced)](https://g
 
 Breen, J. (2026). *Tatort: Excel — A Forensic Guide to Data Cleaning* (workshop materials).  
 Geospatial Research Lab, American University Library.  
-https://github.com/GeospatialResearchLab/workshop-data-cleaning-excel-tatort-2026-sprints
+https://github.com/GeospatialResearchLab/workshop-data-cleaning-tatort-2026
 
 ---
 
