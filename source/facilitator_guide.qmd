@@ -71,6 +71,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 | Lots of CHECK in `Sender_Code` | Formula points at the wrong sheet or `TRIM` was left out. Recopy it. |
 | Dates show as numbers or `#####` | Home → Number Format → Short Date; widen the column. |
 | Counters give 0 | They're working in a `Catch_Up` sheet: replace `Working` in the counter with that sheet's name. |
+| Counter overwrote data | They pasted it into the Working tab. Undo (Ctrl/⌘ + Z), then paste it on the **Case_Log** tab, H4–H7. |
 | Wrecked `Working` | Jump to the latest `Catch_Up` sheet. Their `Tatort_Evidence` is untouched, and File → Version History can roll back the whole file. |
 
 ## Slide-by-Slide Notes
@@ -230,6 +231,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 
 **29:30–34:30 · Work (5 min)**
 
+- The counters go on the **Case_Log tab**, not Working: H4 titles, H5 aliases, H6 WDR, H7 dates. Students who paste them into Working land in the middle of the data (column H there is `Regie`).
 - The counters use column letters (K, L, N), which is why everyone adds the columns in the same order. In a Catch_Up sheet, replace `Working` with the sheet name.
 - Anyone with lots of CHECK: they probably skipped the `TRIM` (trailing spaces) or the formula points at the wrong sheet.
 - Fast finishers: Insert → PivotTable → `Sender_Code` in Rows and in Values. A whole broadcaster count in 20 seconds (On Your Own, Lead H).

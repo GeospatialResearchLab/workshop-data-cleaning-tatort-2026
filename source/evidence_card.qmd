@@ -60,7 +60,7 @@ Removed <span class="blank"></span> Rows left <span class="blank"></span>
 
 []{.box} New columns `Titel_Clean`, `Titel_Changed`
 
-[]{.box} Counter **Titles changed** → `Case_Log`, column H
+[]{.box} Counter **Titles changed** → **`Case_Log`** tab, cell **H4**
 
 Titles changed <span class="blank"></span>
 
@@ -72,7 +72,7 @@ Titles changed <span class="blank"></span>
 
 []{.box} New column `Sender_Code`
 
-[]{.box} Counters **Unknown aliases** and **WDR episodes**
+[]{.box} Counters **Unknown aliases** → **H5**, **WDR episodes** → **H6** (`Case_Log` tab)
 
 CHECK <span class="blank"></span> Broadcasters <span class="blank"></span> WDR <span class="blank"></span>
 
@@ -84,7 +84,7 @@ CHECK <span class="blank"></span> Broadcasters <span class="blank"></span> WDR <
 
 []{.box} New column `Date_Clean` → **Home → Number Format → Short Date**
 
-[]{.box} New column `Date_Check` · counter **Impossible dates**
+[]{.box} New column `Date_Check` · counter **Impossible dates** → `Case_Log` **H7**
 
 []{.box} Sort `Date_Clean` oldest → newest
 

@@ -310,7 +310,7 @@ New column **`Titel_Changed`**: copy its formula too. Filter it for **TRUE**.
 :::
 
 ::: {.action}
-How many? Copy the **Titles changed** counter from `Formulas` into an empty cell of `Case_Log` (column H). Write the number on your card.
+How many? Click the **`Case_Log`** tab (not Working) and paste the **Titles changed** counter from `Formulas` into cell **H4**. Write the number on your card.
 :::
 
 ::: notes
@@ -374,12 +374,13 @@ Open the `Sender_Code` filter drop-down. Any **CHECK**? How many broadcasters ar
 :::
 
 ::: {.action}
-Count WDR's episodes: copy the **WDR episodes** counter into `Case_Log`, column H.
+In the **`Case_Log`** tab, paste the **Unknown aliases** counter into **H5** and the **WDR episodes** counter into **H6**.
 :::
 
 ::: notes
 **29:30–34:30 · Work (5 min)**
 
+- The counters go on the **Case_Log tab**, not Working: H4 titles, H5 aliases, H6 WDR, H7 dates. Students who paste them into Working land in the middle of the data (column H there is `Regie`).
 - The counters use column letters (K, L, N), which is why everyone adds the columns in the same order. In a Catch_Up sheet, replace `Working` with the sheet name.
 - Anyone with lots of CHECK: they probably skipped the `TRIM` (trailing spaces) or the formula points at the wrong sheet.
 - Fast finishers: Insert → PivotTable → `Sender_Code` in Rows and in Values. A whole broadcaster count in 20 seconds (On Your Own, Lead H).
@@ -433,7 +434,7 @@ New column **`Date_Clean`** from `Formulas`. Select the column → **Home → Nu
 :::
 
 ::: {.action}
-New column **`Date_Check`** from `Formulas`. How many say **CHECK**? Use the **Impossible dates** counter.
+New column **`Date_Check`** from `Formulas`. How many say **CHECK**? Paste the **Impossible dates** counter into **`Case_Log`** cell **H7**.
 :::
 
 ::: {.action}
