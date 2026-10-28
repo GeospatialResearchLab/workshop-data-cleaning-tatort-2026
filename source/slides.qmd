@@ -1,7 +1,7 @@
 ---
 title: "Tatort: Excel"
 subtitle: "A Forensic Guide to Data Cleaning · Excel for the Web"
-author: "Dr. Jessica Breen | American University | 2026"
+author: "Jessica Breen, PhD | American University | 2026"
 format:
   revealjs:
     theme: [default, theme/tatort.scss]
