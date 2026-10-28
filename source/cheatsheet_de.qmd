@@ -1,0 +1,126 @@
+---
+title: "Tatort: Excel – Cheat Sheet (German Excel)"
+format:
+  html:
+    theme: none
+    minimal: true
+    embed-resources: true
+    css: [theme/fonts.css, theme/print.css, theme/cheat_ip.css]
+    output-file: Cheatsheet_DE.html
+---
+
+::: {.cheat}
+
+::: {.case-header}
+[Ermittlungsakte · Case file reference · Excel for the web · German formulas]{.kicker}
+
+# Tatort: Excel
+
+[A Forensic Guide to Data Cleaning. Function names are given as German Excel shows them, with the English name in brackets. Formulas use the `;` separator; if your Excel uses `,` (German language, US regional format), swap them, but not inside quotation marks.]{.sub}
+:::
+
+## The Investigation
+
+| Step | Action | Why it matters |
+|---|---|---|
+| **0 · Secure the Scene** | Duplicate the raw sheet and work only on the copy. AutoSave is always on! Start a case log. | The original is your evidence. If anything goes wrong, you can always go back. |
+| **1 · Survey the Scene** | Scroll everything. Freeze panes, turn on filters, open every drop-down. Note clues. | You can't fix what you haven't noticed. Look before you touch. |
+| **2 · Open the Case File** | Write the order of operations. Log every change: what, why, how verified. | A plan makes the work repeatable, for colleagues and for future you. |
+| **3 · Clear the Scene** | Delete junk rows above the header, irrelevant columns and exact duplicates. | Less to clean, fewer distractions. |
+| **4 · Process the Evidence** | Fix spaces & hidden characters, data types, dates, case, missing-value placeholders. | Hidden problems break sorting, lookups, math and de-duplication. |
+| **5 · Identify the Suspects** | Split combined columns, unmask aliases with a reference table, add validation. | One fact per column; one spelling per category. |
+| **6 · Cross-Examine** | Remove duplicates again. Pivot tables, sorting and conditional formatting. | Confirms the cleaned data tells a consistent story. |
+| **7 · Close the Case** | Save a clean copy, download a CSV, update the data dictionary, keep the case log. | Clean data is only useful if others can find, trust and reuse it. |
+
+## Where to Find It (Excel for the Web, German)
+
+| Tool | Location in German Excel (English) |
+|---|---|
+| Open a shared file | Open the link → **Datei** (File) → Create a Copy → Create a copy online. Your copy lives in your OneDrive |
+| Open your own file | office.com → Excel → Upload a file |
+| Copy a sheet | Right-click the sheet tab → Duplicate |
+| Freeze header row | **Ansicht → Fenster fixieren → Oberste Zeile fixieren** (View → Freeze Panes → Freeze Top Row) |
+| Filter | **Daten → Filter** (Data → Filter) |
+| Make a Table | Click in the data → **Einfügen → Tabelle** (Insert → Table). New formula columns fill down by themselves |
+| Find blanks | Filter a column → tick only **(Leer)** (Blanks); count with `=ANZAHLLEEREZELLEN(Bereich)` |
+| Find & Replace | **Start → Suchen und Auswählen → Ersetzen** (Home → Find & Select → Replace), **Strg/⌘ + H** |
+| Remove Duplicates | **Daten → Duplikate entfernen** (Data → Remove Duplicates) |
+| Highlight duplicates | **Start → Bedingte Formatierung → Regeln zum Hervorheben von Zellen → Doppelte Werte** |
+| Split a column | `TEXTVOR` / `TEXTNACH` / `TEXTTEILEN`, or search for *Text in Spalten* (Text to Columns) |
+| Paste as values | Copy, then **Strg/⌘ + Umschalt + V** (Ctrl/⌘ + Shift + V) |
+| Numbers stored as text | Helper column with `=WERT()` (VALUE), then paste values |
+| Restrict entries | **Daten → Datenüberprüfung** (Data → Data Validation) |
+| Spot-check | **Einfügen → PivotTable**; **Start → Bedingte Formatierung** |
+| Save a copy | **Datei** → Create a Copy → Create a copy online |
+| Download a CSV | **Datei** → Export → Download as CSV UTF-8 |
+| Roll back a disaster | **Datei → Versionsverlauf** (File → Version History) |
+| Can't find a button? | Type its German or English name in the search box at the top of Excel |
+
+Number formats: *General* is **Standard**; *Short Date* is **Datum, kurz**. TRUE/FALSE show as **WAHR/FALSCH**. On German keyboards Ctrl is **Strg**.
+
+## Handy Functions
+
+| German (English) | What it does | Example from the Tatort case |
+|---|---|---|
+| `GLÄTTEN` (TRIM) | Removes leading, trailing and double spaces | `=GLÄTTEN(B2)` |
+| `SÄUBERN` (CLEAN) | Removes non-printing characters (line breaks, …) | `=GLÄTTEN(SÄUBERN(B2))` |
+| `WECHSELN` (SUBSTITUTE) | Replaces specific text inside a cell | `=WECHSELN(G2; ZEICHEN(10); ", ")` |
+| `UNIZEICHEN` (UNICHAR) | Any character by its Unicode number | `=GLÄTTEN(WECHSELN(B2; UNIZEICHEN(160); " "))` |
+| `LÄNGE` (LEN) | Counts characters, including invisible ones | `=LÄNGE(B2)` |
+| `ISTZAHL` / `ISTTEXT` (ISNUMBER / ISTEXT) | Reveals a cell's real data type | `=ISTZAHL(A2)` |
+| `LET` (LET) | Gives a value a short name inside a formula | `=LET(d; [@Erstausstrahlung]; WENN(ISTZAHL(d); d; …))` |
+| `WERT` (VALUE) | Turns number-looking text into a number | `=WERT(WECHSELN(A2; "#"; ""))` |
+| `DATUM` (DATE) | Builds a real date from year, month, day | `=DATUM(RECHTS(D2;4); TEIL(D2;4;2); LINKS(D2;2))` |
+| `TEXT` (TEXT) | Formats a number/date as text | `=TEXT(D2; "JJJJ-MM-TT")` (German format codes!) |
+| `GROSS` / `KLEIN` / `GROSS2` (UPPER / LOWER / PROPER) | Changes capitalisation | `=GROSS2(B2)` (check the result!) |
+| `IDENTISCH` (EXACT) | Case-sensitive comparison | `=IDENTISCH(B2; GROSS(B2))` flags ALL CAPS |
+| `LINKS` / `RECHTS` / `TEIL` (LEFT / RIGHT / MID) | Pulls characters from a position | `=LINKS(E2; FINDEN("("; E2) - 1)` |
+| `FINDEN` / `SUCHEN` (FIND / SEARCH) | Position of text (case-sensitive / not) | `=FINDEN("("; E2)` |
+| `TEXTVOR` / `TEXTNACH` (TEXTBEFORE / TEXTAFTER) | Text before/after a delimiter | `=TEXTVOR(C2; "/"; ; ; ; C2)` |
+| `TEXTTEILEN` (TEXTSPLIT) | Splits into several cells | `=TEXTTEILEN(C2; "/")` |
+| `TEXTKETTE` / `&` / `TEXTVERKETTEN` (CONCAT / TEXTJOIN) | Combines text | `=A2 & " – " & B2` |
+| `WENN` / `ODER` (IF / OR) | Tests a condition | `=WENN(ODER(G2="n/a"; G2="-"); ""; G2)` |
+| `WENNFEHLER` (IFERROR) | Fallback when a formula errors | `=WENNFEHLER(LINKS(E2; FINDEN("(";E2)-1); E2)` |
+| `XVERWEIS` / `SVERWEIS` (XLOOKUP / VLOOKUP) | Looks up a value in a reference table | `=XVERWEIS(C2; Known_Aliases!A:A; Known_Aliases!B:B; "CHECK")` |
+| `ZÄHLENWENN` (COUNTIF) | Counts matches: finds duplicates | `=ZÄHLENWENN(A:A; A2) > 1` |
+| `RUNDEN` / `AUFRUNDEN` / `ABRUNDEN` (ROUND / ROUNDUP / ROUNDDOWN) | Changes the stored value, not just the display | `=RUNDEN(H2; 0)` |
+
+
+## Known Tricks of the Trade
+
+::: {.two-col}
+::: {.warn}
+**GLÄTTEN and SÄUBERN miss the non-breaking space** (character 160). Use `WECHSELN(…; UNIZEICHEN(160); " ")` first. `UNIZEICHEN` means the same thing everywhere.
+:::
+
+::: {.warn}
+**Find & Replace replaces text inside cells** (`-` in *Schulze-Rohr*!) and treats `?` and `*` as wildcards. For placeholders, use `=WENN(ODER(G2="n/a"; G2="-"); ""; G2)` instead.
+:::
+
+::: {.warn}
+**`DATWERT` (DATEVALUE) follows your regional settings.** `DATUM(Jahr; Monat; Tag)` never guesses, so build dates explicitly.
+:::
+
+::: {.warn}
+**`GROSS2` (PROPER) doesn't know German capitalisation** (*Taxi nach Leipzig*) and breaks genuine acronyms (*KI*). Flag, then review.
+:::
+
+::: {.clue}
+**Same value ≠ duplicate.** Three different episodes are called *Die Abrechnung*. Decide which columns define "the same record".
+:::
+
+::: {.clue}
+**Helper-column routine:** add a column to the Table → formula (it fills down) → check (`LÄNGE`, filters, counts) → keep it beside the original. At the very end, in a copy: Paste Values over the original, delete helpers, log it.
+:::
+
+::: {.clue}
+**In a Table,** `[@Titel]` = this row's `Titel`; `[Titel]` = the whole column. Click a cell while writing a formula and Excel writes the reference for you.
+:::
+
+::: {.clue}
+**Clean, then de-duplicate again.** Near-duplicates only match once spaces and spellings are fixed.
+:::
+:::
+
+
+:::
