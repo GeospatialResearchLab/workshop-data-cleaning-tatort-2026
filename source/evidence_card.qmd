@@ -26,7 +26,7 @@ format:
 ::: {.sprint}
 ### Pre-flight
 
-[]{.box} Open the evidence link in your browser: <span class="blank wide link"></span>
+[]{.box} Open the workshop page **`bit.ly/4jH0QRT`** → **Open the evidence**
 
 []{.box} **File → Create a Copy → Create a copy online**
 

@@ -31,7 +31,11 @@ While everyone settles in, two quick things:
 :::
 
 ::: {.action}
-**On your laptop:** sign in at **office.com** with your university account and open Excel.
+**On your laptop:** open the workshop page at
+
+[bit.ly/4jH0QRT]{.biglink}
+
+Then sign in at **office.com** with your university account.
 :::
 
 ::: {.small .muted}
@@ -51,7 +55,8 @@ Pre-workshop survey
 **Before 0:00 · On screen as people arrive**
 
 - Leave this slide up while people come in, so the pre-workshop survey is done before any teaching starts.
-- Phones for the survey, laptops for office.com. Both can happen at once.
+- Phones for the survey, laptops for the workshop page and office.com. Both can happen at once.
+- Read the link aloud: "bit dot l-y slash four, lowercase j, capital H, zero, capital Q, capital R, capital T". Bitly links are case-sensitive, and the 0 is a zero.
 - Start the clock when you move to the next slide.
 :::
 
@@ -118,10 +123,10 @@ Each sprint: **1-minute briefing → you work, timer on screen → checkpoint**.
 
 ## Pre-flight {.your-turn data-timer="240"}
 
-[⏱ 4 min]{.timer-static} [🔗 Evidence link: add your short link here before the session]{.behind}
+[⏱ 4 min]{.timer-static} [Workshop page: bit.ly/4jH0QRT · backup evidence link: bit.ly/4Bx688K]{.behind}
 
 ::: {.action}
-Type the **evidence link** on screen into your laptop's browser. Signed in with your university account?
+On the workshop page (**bit.ly/4jH0QRT**), click **Open the evidence**. Signed in with your university account?
 :::
 
 ::: {.action}

@@ -176,3 +176,5 @@ $selection-bg: $tape;
 .reveal .qr { text-align: center; background: #FFFFFF; color: $ink; padding: .5em .5em .35em; border-top: 6px solid $tape; margin-top: .2em; }
 .reveal .qr img { width: 100%; max-width: 380px; margin: 0 auto !important; display: block; }
 .reveal .qr p { margin: .1em 0 0; font-family: "Special Elite", monospace; text-transform: uppercase; font-size: .62em; color: $ink; }
+
+.reveal .biglink { display: inline-block; font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 1.35em; color: $ink; background: $tape; padding: .05em .4em; letter-spacing: .04em; }
