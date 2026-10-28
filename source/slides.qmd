@@ -27,7 +27,7 @@ Since **29 November 1970**, Germany has settled in on Sunday nights for *Tatort*
 - **1,311 episodes**, ten regional broadcasters, dozens of detective teams
 - An episode list handled by many people over 55 years
 
-Tonight the list itself is the crime scene. **You have 45 minutes.**
+Today the list itself is the crime scene. **You have 45 minutes.**
 
 ::: notes
 **0:00–2:00 · Welcome + hook**
@@ -38,7 +38,7 @@ Tonight the list itself is the crime scene. **You have 45 minutes.**
 - Hand out the Evidence Card now, one per person.
 :::
 
-## How Tonight Works
+## How Today Works
 
 ::: {.agenda}
 | | | |
@@ -55,7 +55,7 @@ Tonight the list itself is the crime scene. **You have 45 minutes.**
 Each sprint: **1-minute briefing → you work, timer on screen → checkpoint**. Fell behind? Every sprint has a **catch-up sheet** so you can jump straight back in.
 
 ::: notes
-**2:00–3:00 · How tonight works**
+**2:00–3:00 · How today works**
 
 - This is the contract with the room. Short briefings, then they work on their own while the timer runs. When the timer hits zero, we all compare numbers and move on together, wherever you are.
 - Stress the catch-up sheets: nobody is left behind for more than one sprint. Falling behind is normal, not failure.
@@ -67,7 +67,7 @@ Each sprint: **1-minute briefing → you work, timer on screen → checkpoint**.
 | Sheet | What's in it |
 |---|---|
 | `Tatort_Evidence` | 1,339 rows of episodes. Something is wrong with nearly every column. |
-| `Formulas` | **Every formula for tonight**, ready to copy. No typing marathons. |
+| `Formulas` | **Every formula for today**, ready to copy. No typing marathons. |
 | `Known_Aliases` | Reference table: broadcaster alias → official code |
 | `Data_Dictionary` · `Case_Log` | What *clean* looks like · your record of every change |
 | `Catch_Up_2` – `Catch_Up_4` | The scene as it should look after each sprint |
@@ -159,7 +159,7 @@ Call out your clues. Did anyone find…
 - titles in ALL CAPS, `n/a`, `unbekannt` and `NULL` instead of blanks?
 ::::
 
-Tonight we chase the first four. The rest are in the **On Your Own** guide.
+Today we chase the first four. The rest are in the **On Your Own** guide.
 
 ::: notes
 **13:00–14:00 · Checkpoint (1 min)**
@@ -442,7 +442,7 @@ You cleaned the four biggest leads. The **On Your Own** guide walks through the 
 ::: notes
 **42:00–43:00 · What's left**
 
-- Each lead takes 3–5 minutes with the guide; they can do it tonight while it's fresh. The guide has the formulas and the expected numbers, so they can check themselves.
+- Each lead takes 3–5 minutes with the guide; they can do it later today while it's fresh. The guide has the formulas and the expected numbers, so they can check themselves.
 - Their copy stays in their OneDrive, so they can pick up exactly where they left off.
 :::
 
@@ -466,7 +466,7 @@ You cleaned the four biggest leads. The **On Your Own** guide walks through the 
 At the bottom of your Evidence Card:
 
 ::: {.action}
-**One** technique from tonight you'll use on your own data, and *which* data.
+**One** technique from today you'll use on your own data, and *which* data.
 :::
 
 ::: {.action}

@@ -23,7 +23,7 @@ Five timed sprints. Each one: a 1–1.5 minute briefing, a 3–5 minute work per
 
 | Time | Segment | Checkpoint to reveal |
 |---|---|---|
-| 0:00–4:00 | Welcome, how tonight works, the workbook | |
+| 0:00–4:00 | Welcome, how today works, the workbook | |
 | 4:00–9:00 | Pre-flight: open link, make a copy, duplicate tab | Everyone has `Working` |
 | 9:00–14:00 | Sprint 1 · Survey the scene | Clues from the room |
 | 14:00–21:00 | Sprint 2 · Clear the scene | 22 duplicates · 1,317 rows |
@@ -84,9 +84,9 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 :::
 
 ::: {.note-slide}
-### <span class="num">3</span> How Tonight Works
+### <span class="num">3</span> How Today Works
 
-**2:00–3:00 · How tonight works**
+**2:00–3:00 · How today works**
 
 - This is the contract with the room. Short briefings, then they work on their own while the timer runs. When the timer hits zero, we all compare numbers and move on together, wherever you are.
 - Stress the catch-up sheets: nobody is left behind for more than one sprint. Falling behind is normal, not failure.
@@ -264,7 +264,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 
 **42:00–43:00 · What's left**
 
-- Each lead takes 3–5 minutes with the guide; they can do it tonight while it's fresh. The guide has the formulas and the expected numbers, so they can check themselves.
+- Each lead takes 3–5 minutes with the guide; they can do it later today while it's fresh. The guide has the formulas and the expected numbers, so they can check themselves.
 - Their copy stays in their OneDrive, so they can pick up exactly where they left off.
 :::
 

@@ -44,7 +44,7 @@ In the guide's order (Lead B removes 6 rows, so later counts are for 1,311 rows)
 
 | Minutes | Segment |
 |---:|---|
-| 0–4 | Welcome, how tonight works, the workbook |
+| 0–4 | Welcome, how today works, the workbook |
 | 4–9 | Pre-flight |
 | 9–14 | Sprint 1 · Survey (1 brief · 3 work · 1 checkpoint) |
 | 14–21 | Sprint 2 · Clear the scene (1.5 · 5 · 0.5) |
