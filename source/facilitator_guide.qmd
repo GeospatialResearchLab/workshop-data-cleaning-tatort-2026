@@ -49,7 +49,7 @@ Five timed sprints. Each one: a 1–1.5 minute briefing, a 3–5 minute work per
 
 []{.box} **Test the formula copy routine** once in the browser you'll present from (Formulas sheet → formula bar → Ctrl/⌘ + A, C → Esc → target cell → Ctrl/⌘ + V). If pasting gives text instead of a formula, tell students to click into the formula bar of the target cell before pasting.
 
-[]{.box} **Print** one Evidence Card per student, **double-sided** (the back has the survey QR codes), and a few cheat sheets. The On Your Own guide is for afterwards: share the link, no need to print.
+[]{.box} **Print** one Evidence Card per student (one page, with the survey QR codes at the bottom), and a few cheat sheets. The On Your Own guide is for afterwards: share the link, no need to print.
 
 []{.box} **Open** `Slides.html` in a browser, full screen. Press **S** for speaker view.
 
@@ -295,6 +295,6 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 **44:00–45:00 · Post-workshop survey**
 
 - Give people a minute with their phones before they pack up. Surveys done after people leave rarely get done.
-- The survey links are also on the back of the Evidence Card, so anyone who has to rush out can do it later.
+- The survey links are also at the bottom of the Evidence Card, so anyone who has to rush out can do it later.
 - People keep their Evidence Card: it has their checkpoint numbers, the workshop link and the survey links.
 :::

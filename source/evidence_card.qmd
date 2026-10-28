@@ -99,29 +99,24 @@ Impossible <span class="blank"></span> First real date <span class="blank wide">
 **Case not closed yet?** The *On Your Own* guide documents every remaining lead (episode numbers, the last six duplicates, writers, directors, ALL CAPS titles, investigators, PivotTable check, CSV export), with formulas and the numbers to expect. Find it with the other materials at **github.com/GeospatialResearchLab/workshop-data-cleaning-excel-tatort-2026-sprints**
 :::
 
-::: {.pagebreak}
-:::
-
-::: {.case-header}
-[Ermittlungsakte Nr. 1311 · Evidence Card · Back]{.kicker}
-
-# Surveys
-:::
-
 ::: {.surveys}
 ::: {.survey}
 ![](theme/img/survey_pre.png)
 
+::: {.stxt}
 ### Pre-workshop survey
 
 Before we start. Scan with your phone, or go to **forms.cloud.microsoft/r/yXhf9PuJ0n**
+:::
 :::
 
 ::: {.survey}
 ![](theme/img/survey_post.png)
 
+::: {.stxt}
 ### Post-workshop survey
 
 At the end of the workshop. Scan with your phone, or go to **forms.cloud.microsoft/r/kHFPesD57m**
+:::
 :::
 :::

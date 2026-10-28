@@ -35,7 +35,7 @@ While everyone settles in, two quick things:
 :::
 
 ::: {.small .muted}
-No phone? The survey link is also on the back of your Evidence Card: forms.cloud.microsoft/r/yXhf9PuJ0n
+No phone? The survey link is also at the bottom of your Evidence Card: forms.cloud.microsoft/r/yXhf9PuJ0n
 :::
 :::
 ::: {.column width="38%"}
@@ -522,6 +522,6 @@ Post-workshop survey
 **44:00–45:00 · Post-workshop survey**
 
 - Give people a minute with their phones before they pack up. Surveys done after people leave rarely get done.
-- The survey links are also on the back of the Evidence Card, so anyone who has to rush out can do it later.
+- The survey links are also at the bottom of the Evidence Card, so anyone who has to rush out can do it later.
 - People keep their Evidence Card: it has their checkpoint numbers, the workshop link and the survey links.
 :::
