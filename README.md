@@ -15,6 +15,14 @@ Every messy spreadsheet is a crime scene. In this fast-paced, hands-on workshop 
 
 ---
 
+## Workshop Page
+
+[`index.html`](index.html) is a landing page for participants: what the workshop is, how to get ready, links to everything needed during and after the session, and how to catch up if you arrive late. To publish it, turn on GitHub Pages (**Settings → Pages → Deploy from a branch → `main` / root**). It will then be at `https://geospatialresearchlab.github.io/workshop-data-cleaning-excel-tatort-2026-sprints/`, which makes a good target for the short link.
+
+Before each session, fill in the date, room and evidence link in the `WORKSHOP` block near the bottom of `index.html`.
+
+---
+
 ## Materials
 
 - **Slides (PDF):** [`Slides.pdf`](documents/Slides.pdf) · [HTML version with sprint timers](documents/Slides.html)
@@ -67,6 +75,7 @@ Instructor materials (facilitator guide, answer key, solved workbook, cleaned CS
 ## Repository Structure
 
 ```
+index.html                            Workshop landing page (GitHub Pages)
 documents/
 ├── Slides.pdf / Slides.html          Workshop slides (HTML has the sprint timers; press S for notes)
 ├── Evidence_Card.pdf                 1-page in-session worksheet
@@ -84,7 +93,7 @@ documents/
     └── Tatort_clean.csv              Clean data as CSV
 source/
 ├── slides.qmd, evidence_card.qmd, on_your_own.qmd, cheatsheet.qmd, facilitator_guide.qmd
-├── theme/                            Slide theme, sprint timer, print styles, fonts
+├── theme/                            Slide theme, sprint timer, print styles, fonts (also used by index.html)
 └── build_data.py                     Builds the workbook and verifies every checkpoint
 ```
 
