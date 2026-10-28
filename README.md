@@ -116,7 +116,7 @@ It is the in-person edition of [*Tatort: Excel*](https://github.com/GeospatialRe
 
 Breen, J. (2026). *Tatort: Excel — A Forensic Guide to Data Cleaning, In-Person Edition* (workshop materials).  
 Geospatial Research Lab, American University Library.  
-https://github.com/GeospatialResearchLab/workshop-data-cleaning-excel-tatort-2026-inperson
+https://github.com/GeospatialResearchLab/workshop-data-cleaning-excel-tatort-2026-sprints
 
 ---
 

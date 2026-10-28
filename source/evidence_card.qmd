@@ -96,7 +96,7 @@ Impossible <span class="blank"></span> First real date <span class="blank wide">
 :::
 
 ::: {.after}
-**Case not closed yet?** The *On Your Own* guide documents every remaining lead (episode numbers, the last six duplicates, writers, directors, ALL CAPS titles, investigators, PivotTable check, CSV export), with formulas and the numbers to expect. Find it with the other materials at **github.com/GeospatialResearchLab/workshop-data-cleaning-excel-tatort-2026-inperson**
+**Case not closed yet?** The *On Your Own* guide documents every remaining lead (episode numbers, the last six duplicates, writers, directors, ALL CAPS titles, investigators, PivotTable check, CSV export), with formulas and the numbers to expect. Find it with the other materials at **github.com/GeospatialResearchLab/workshop-data-cleaning-excel-tatort-2026-sprints**
 :::
 
 ::: {.exit}
