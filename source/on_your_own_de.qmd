@@ -1,0 +1,193 @@
+---
+title: "Tatort: Excel – On Your Own (German Excel)"
+format:
+  html:
+    theme: none
+    minimal: true
+    embed-resources: true
+    css: [theme/fonts.css, theme/print.css, theme/guide.css]
+    output-file: On_Your_Own_DE.html
+---
+
+::: {.case-header}
+[Ermittlungsakte Nr. 1311 · Follow-up investigation · Excel for the web · German formulas]{.kicker}
+
+# On Your Own: Closing the Case
+
+[In the workshop you cleared the scene, exposed hidden characters, unmasked the broadcasters and rescued the dates. The leads below cover the rest. Each takes 3–5 minutes and gives the number to expect, so you can check your own work.]{.sub}
+:::
+
+## German Excel
+
+All formulas in this guide use **German function names** and the **`;`** separator used with German regional settings.
+
+::: {.clue}
+**Does your Excel use commas instead?** If Excel is in German but your regional format is US, replace each `;` with `,`. Leave anything inside quotation marks alone: in Lead D, `", "` stays as it is. To check, start typing `=WENN(` in a cell: the tooltip shows which separator Excel expects.
+:::
+
+A few words you'll see on screen in German Excel:
+
+| In this guide | In German Excel |
+|---|---|
+| TRUE / FALSE | **WAHR / FALSCH** |
+| (Blanks) in a filter list | **(Leer)** |
+| Home · Insert · Data · File | **Start · Einfügen · Daten · Datei** |
+| Remove Duplicates | **Duplikate entfernen** |
+| Find & Select → Replace | **Suchen und Auswählen → Ersetzen** |
+| Fill Color → No Fill | **Füllfarbe → Keine Füllung** |
+| PivotTable: Rows · Values · Count | **PivotTable: Zeilen · Werte · Anzahl** |
+
+Can't find a command? Type its German or English name in the search box at the top of Excel.
+
+## Before You Start
+
+- Open **your copy** of the evidence at office.com (it's in your OneDrive). Keep working in `Working`, or in the last `Catch_Up` sheet you used.
+- All your helper columns live **inside the Table**. Type a new column name in the first empty header cell to the right of the table, press **Enter**, then enter the formula in the cell below. It fills the whole column.
+- In a Table, `[@Titel]` means "the `Titel` value in this row" and `[Titel]` means "the whole `Titel` column". You can click a cell instead of typing the reference: Excel writes it for you.
+- After each lead, add one row to `Case_Log`: what you found, what you did, how you checked it.
+
+::: {.clue}
+The expected numbers assume you do the leads **in this order**. Lead B removes six rows, so counts before and after it differ by a little.
+:::
+
+## Lead A · The Yellow Highlights
+
+A previous clerk highlighted about 25 rows in yellow, and nobody knows why. **Fill colour isn't data.**
+
+[]{.box} Select the data rows of your table (from row 2 down, not the header) → **Start → Füllfarbe ▾ → Keine Füllung** (Home → Fill Color → No Fill).
+
+[]{.box} Log it: if the highlight *had* meant something, you'd turn it into a column such as `Needs_Review = WAHR` before removing it.
+
+## Lead B · Episode Numbers & the Last Six Duplicates
+
+`Folge` (episode number) mixes real numbers, numbers stored as text, and text like `Folge 123` and `#123`.
+
+[]{.box} New column `Folge_Clean`:
+
+```
+=WERT(WECHSELN(WECHSELN([@Folge]; "Folge "; ""); "#"; ""))
+```
+
+[]{.box} New column `Folge_Repeat` to look for repeated episode numbers **before** deleting anything:
+
+```
+=ZÄHLENWENN([Folge_Clean]; [@Folge_Clean]) > 1
+```
+
+[]{.box} Filter `Folge_Repeat` for **WAHR**. Expect **12 rows: 6 pairs**. Sort by `Folge_Clean` and compare each pair. They're the same episode; only a trailing space in `Titel` differed, which is why Remove Duplicates missed them in Sprint 2.
+
+[]{.box} Clear the filter. **Daten → Duplikate entfernen** (Data → Remove Duplicates) → untick everything except `Folge_Clean` → **OK**. Expect **6 removed, 1,311 rows**.
+
+[]{.box} Check: `Folge_Clean` runs from **1** to **1311**. Sort it, or use `=MIN(...)` and `=MAX(...)` on the column in `Case_Log`.
+
+::: {.warn}
+Removing duplicates on **one** column is only safe when that column really is a unique key. Check first (that's what `Folge_Repeat` was for), and never de-duplicate on `Titel`: three different episodes are called *Die Abrechnung*.
+:::
+
+## Lead C · Case Numbers Stored as Text
+
+`Fall` counts an investigator's cases. 45 are numbers stored as text, 20 are genuine notes like `2 (4)` (a joint case: the 2nd for one detective, the 4th for the other), and 3 are impossible.
+
+[]{.box} New column `Fall_Clean`: `=WENNFEHLER(WERT([@Fall]); [@Fall])`. This converts what it can and leaves real notes as text.
+
+[]{.box} Sort `Fall_Clean` smallest → largest. Expect **two `0`s** at the top and one **`999`** among the numbers. A case number of 0 is impossible. 999 isn't impossible, but it's wildly implausible.
+
+[]{.box} Don't guess a replacement. Note the three episodes in `Case_Log` as "needs verification".
+
+## Lead D · Writers: Line Breaks & Placeholders
+
+`Autor` has two problems: **12** cells with writers on separate lines inside one cell (a line break, `ZEICHEN(10)`), and **20** placeholders (`n/a`, `unbekannt`, `-`, `?`) instead of blanks.
+
+[]{.box} New column `Autor_Clean`:
+
+```
+=LET(a; WECHSELN([@Autor]; ZEICHEN(10); ", ");
+     WENN(ODER(a="n/a"; a="unbekannt"; a="-"; a="?"); ""; a))
+```
+
+[]{.box} Filter `Autor_Clean` for **(Leer)**: expect **20**.
+
+::: {.warn}
+Why not Find & Replace? Replacing `-` would also break 43 hyphenated names like *Schulze-Rohr*, and `?` is a wildcard in Find & Replace. A formula only changes cells that are *exactly* the placeholder.
+:::
+
+## Lead E · Directors & Notes
+
+[]{.box} New column `Regie_Clean`: `=GLÄTTEN([@Regie])` (15 directors have trailing spaces).
+
+[]{.box} Filter `Regie_Clean` for **(Leer)**: expect **16** missing directors. Leave them blank, or flag them? Either is defensible. Record your decision in `Case_Log`.
+
+[]{.box} New column `Notes_Clean`: `=WENN(ODER([@Besonderheiten]="NULL"; [@Besonderheiten]=""); ""; [@Besonderheiten])` turns **10** `NULL`s into real blanks.
+
+::: {.clue}
+Without the `[@Besonderheiten]=""` part, every empty cell comes back as **0**. Excel treats a reference to an empty cell as zero.
+:::
+
+## Lead F · ALL CAPS Titles
+
+[]{.box} New column `Titel_Case`:
+
+```
+=WENN(IDENTISCH([@Titel_Clean]; GROSS([@Titel_Clean])); "CAPS";
+    WENN(IDENTISCH([@Titel_Clean]; KLEIN([@Titel_Clean])); "lower"; ""))
+```
+
+[]{.box} Filter for `CAPS` (expect **33**) and `lower` (expect **10**).
+
+[]{.box} Three of the CAPS titles are genuine: *LU*, *HAL* and *KI*. **Leave them alone.** Fix the others by typing the correct title over the formula in `Titel_Clean` (Excel asks whether to overwrite; that's fine for single cells), or decide to leave them flagged and log the decision.
+
+::: {.warn}
+`GROSS2` (English `PROPER`) doesn't know German capitalisation rules: *Taxi Nach Leipzig* should be *Taxi nach Leipzig*. It would also turn *KI* into *Ki*. Use it as a starting point at most.
+:::
+
+## Lead G · Investigators & Guest Stars
+
+`Ermittler` (investigators) has extra spaces, team aliases (`Batic & Leitmayr`, `Leitmayr und Batic`, `Batic/Leitmayr`) and guest appearances written in brackets.
+
+[]{.box} Click the `Ermittler` column header cell, then select the column's data. **Start → Suchen und Auswählen → Ersetzen** (Home → Find & Select → Replace), one at a time:
+
+| Find | Replace with |
+|---|---|
+| ` & ` (space, ampersand, space) | ` und ` |
+| `Leitmayr und Batic` | `Batic und Leitmayr` |
+| `Schenk und Ballauf` | `Ballauf und Schenk` |
+| `Boerne und Thiel` | `Thiel und Boerne` |
+| `Batic/Leitmayr` | `Batic und Leitmayr` |
+| `Thiel/Boerne` | `Thiel und Boerne` |
+
+Don't replace every `/`: crossover episodes like `Borowski / Lindholm` use a slash between teams.
+
+[]{.box} Two new columns:
+
+```
+Ermittler_Clean:  =GLÄTTEN(TEXTVOR([@Ermittler]; "("; ; ; ; [@Ermittler]))
+Gastauftritt:     =WENNFEHLER(GLÄTTEN(WECHSELN(TEXTNACH([@Ermittler]; "(Gastauftritt "); ")"; "")); "")
+```
+
+[]{.box} Count the guest appearances: filter `Gastauftritt` and untick **(Leer)**, or in `Case_Log` use `=ZÄHLENWENN(Working!X:X; "?*")` with your `Gastauftritt` column's letter instead of `X`. You should find **78**.
+
+::: {.clue}
+Only **77**? One record is written differently. Find it by filtering `Ermittler` for text containing `Gastauftritt` and comparing with your new column. Fix it by hand and log it.
+:::
+
+## Lead H · Cross-Examine with a PivotTable
+
+[]{.box} Click in your table → **Einfügen → PivotTable** (Insert → PivotTable) → new sheet. Drag `Sender_Code` to **Zeilen** (Rows) and `Folge_Clean` to **Werte** (Values), then set it to **Anzahl** (Count).
+
+[]{.box} Expect **15** broadcasters and a grand total of **1,311**. WDR leads with **238**, then NDR with **198**.
+
+[]{.box} Try a second pivot: `Ermittler_Clean` in Rows. Any team that still appears under two spellings? Back to Lead G.
+
+## Lead I · File the Report
+
+[]{.box} **File → Create a Copy → Create a copy online**, named `Tatort_clean_<date>`. Do the rest in the copy, so your working file keeps its formulas.
+
+[]{.box} In the copy, swap each clean column in: select its data → **Ctrl/⌘ + C** → click the first data cell of the original column → **Ctrl/⌘ + Shift + V** (paste values only). Then delete the helper and check columns (`Titel_Clean`, `Titel_Changed`, `Date_Check`, `Folge_Repeat`, `Titel_Case`, …). Keep the new facts as their own columns: `Sender_Code`, `Gastauftritt`.
+
+[]{.box} Delete every sheet except `Working`, then **File → Export → Download as CSV UTF-8**.
+
+[]{.box} Add your new columns to `Data_Dictionary`. Read `Case_Log` from top to bottom. Could a colleague repeat your investigation from it alone?
+
+::: {.task}
+**Case closed** when you have 1,311 rows · a unique, numeric `Folge` from 1 to 1311 · real dates from 29 Nov 1970 onwards (5 impossible dates flagged, not guessed) · one code per broadcaster and one spelling per team · no `n/a`, `NULL` or placeholders · every change in the Case Log.
+:::

@@ -532,6 +532,46 @@ json.dump(CP, open(f"{OUT}/documents/instructor/checkpoints.json", "w"), indent=
 
 wb.save(f"{OUT}/documents/workshop_materials/Tatort_Evidence.xlsx")
 
+# ---- German-language variants of the evidence workbook ----------------------
+# Same data; only the Formulas sheet (and the Case_Log example) use German
+# function names. Two separators: ";" (German regional format) and ","
+# (German display language with US regional format).
+import os
+FORMULAS_DE = [
+    ('=GLÄTTEN(WECHSELN([@Titel]; UNIZEICHEN(160); " "))',
+     "WECHSELN swaps the invisible non-breaking space (UNIZEICHEN(160)) for a normal space, then GLÄTTEN removes extra spaces."),
+    ("=LÄNGE([@Titel])<>LÄNGE([@Titel_Clean])",
+     "WAHR if cleaning changed the title. Filter for WAHR to count them."),
+    ('=XVERWEIS(GLÄTTEN(TEXTVOR([@Sender]; "/"; ; ; ; [@Sender])); Known_Aliases!A:A; Known_Aliases!B:B; "CHECK")',
+     "TEXTVOR takes the lead broadcaster (before any /), GLÄTTEN trims it, XVERWEIS looks up its official code. Unknown aliases show CHECK."),
+    ('=LET(d; [@Erstausstrahlung]; WENN(ISTZAHL(d); d; WENN(TEIL(d;3;1)="."; DATUM(RECHTS(d;4); TEIL(d;4;2); LINKS(d;2)); DATUM(LINKS(d;4); TEIL(d;6;2); RECHTS(d;2)))))',
+     "d is the date cell. Real dates pass through; DD.MM.YYYY and YYYY-MM-DD text are rebuilt with DATUM."),
+    ('=WENN(ODER([@Date_Clean]<DATUM(1970;11;29); [@Date_Clean]>HEUTE()); "CHECK"; "OK")',
+     "Tatort began on 29 Nov 1970. Anything earlier, or in the future, is impossible."),
+]
+COUNTERS_DE = [
+    ("=ZÄHLENWENN(Working!K:K; WAHR)", "Counts WAHR in Titel_Changed (column K). Paste on the Case_Log tab, cell H4."),
+    ('=ZÄHLENWENN(Working!L:L; "CHECK")', "Counts CHECK in Sender_Code (column L). Should be 0. Case_Log H5."),
+    ('=ZÄHLENWENN(Working!L:L; "WDR")', "Counts one broadcaster. Case_Log H6."),
+    ('=ZÄHLENWENN(Working!N:N; "CHECK")', "Counts CHECK in Date_Check (column N). Case_Log H7."),
+]
+assert len(FORMULAS_DE) == len(FORMULAS) and len(COUNTERS_DE) == len(COUNTERS)
+DE_EXAMPLE = '=GLÄTTEN(WECHSELN([@Titel]; UNIZEICHEN(160); " "))'
+os.makedirs(f"{OUT}/documents/german", exist_ok=True)
+for suffix, sep, label in [("DE", ";", "German regional format: arguments separated by ;"),
+                           ("DE-US-format", ",", "German Excel with US regional format: arguments separated by ,")]:
+    conv = (lambda f: f) if sep == ";" else (lambda f: f.replace(";", ","))
+    fs["A1"] = "FORMELN – every formula for today's sprints, in German Excel (" + label + ")"
+    for i, (f, what) in enumerate(FORMULAS_DE, 5):
+        c = fs.cell(row=i, column=3); c.value = conv(f); c.data_type = "s"
+        fs.cell(row=i, column=4, value=what)
+    for i, (f, what) in enumerate(COUNTERS_DE, r0 + 1):
+        c = fs.cell(row=i, column=3); c.value = conv(f); c.data_type = "s"
+        fs.cell(row=i, column=4, value=what)
+    cl["E4"] = conv(DE_EXAMPLE); cl["E4"].data_type = "s"
+    wb.save(f"{OUT}/documents/german/Tatort_Evidence_{suffix}.xlsx")
+# restore English (the in-memory workbook is not saved again, but keep it tidy)
+
 # ============================================================================
 # Instructor workbook: cleaned data + evidence log
 # ============================================================================
