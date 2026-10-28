@@ -558,18 +558,34 @@ COUNTERS_DE = [
 assert len(FORMULAS_DE) == len(FORMULAS) and len(COUNTERS_DE) == len(COUNTERS)
 DE_EXAMPLE = '=GLÄTTEN(WECHSELN([@Titel]; UNIZEICHEN(160); " "))'
 os.makedirs(f"{OUT}/documents/german", exist_ok=True)
-for suffix, sep, label in [("DE", ";", "German regional format: arguments separated by ;"),
-                           ("DE-US-format", ",", "German Excel with US regional format: arguments separated by ,")]:
-    conv = (lambda f: f) if sep == ";" else (lambda f: f.replace(";", ","))
-    fs["A1"] = "FORMELN – every formula for today's sprints, in German Excel (" + label + ")"
-    for i, (f, what) in enumerate(FORMULAS_DE, 5):
-        c = fs.cell(row=i, column=3); c.value = conv(f); c.data_type = "s"
-        fs.cell(row=i, column=4, value=what)
-    for i, (f, what) in enumerate(COUNTERS_DE, r0 + 1):
-        c = fs.cell(row=i, column=3); c.value = conv(f); c.data_type = "s"
-        fs.cell(row=i, column=4, value=what)
-    cl["E4"] = conv(DE_EXAMPLE); cl["E4"].data_type = "s"
-    wb.save(f"{OUT}/documents/german/Tatort_Evidence_{suffix}.xlsx")
+comma = lambda f: f.replace(";", ",")
+fs["A1"] = "FORMELN – every formula for today's sprints, in German Excel"
+fs["A2"] = ("Two versions of each formula. Use column C if your Excel uses ; between arguments (German regional format), "
+            "column D if it uses , (German Excel with US regional format). Not sure? Start typing =WENN( in a cell: the tooltip shows the separator. "
+            "How to copy: click the green cell → click in the formula bar → Strg/⌘+A, Strg/⌘+C → Esc. "
+            "Then click the first empty cell under your new column header and press Strg/⌘+V.")
+fs.row_dimensions[2].height = 58
+fs.unmerge_cells("A1:D1"); fs.merge_cells("A1:E1")
+fs.unmerge_cells("A2:D2"); fs.merge_cells("A2:E2")
+hdr = ["Sprint", "New column (type in row 1)", "Formula with ;  (German regional format)", "Formula with ,  (US regional format)", "What it does"]
+for c, h in enumerate(hdr, 1):
+    fs.cell(row=4, column=c, value=h)
+style_header(fs, 4, 5)
+def put(row, f, what):
+    for col, val in ((3, f), (4, comma(f))):
+        c = fs.cell(row=row, column=col); c.value = val; c.data_type = "s"
+        c.font = Font(name="Consolas", color="1F5C2E"); c.fill = PatternFill("solid", fgColor="E8F3EA")
+        c.alignment = Alignment(wrap_text=True, vertical="top")
+    d = fs.cell(row=row, column=5, value=what); d.alignment = Alignment(wrap_text=True, vertical="top")
+for i, (f, what) in enumerate(FORMULAS_DE, 5):
+    put(i, f, what)
+fs.unmerge_cells(start_row=r0, start_column=1, end_row=r0, end_column=4)
+fs.merge_cells(start_row=r0, start_column=1, end_row=r0, end_column=5)
+for i, (f, what) in enumerate(COUNTERS_DE, r0 + 1):
+    put(i, f, what)
+widths(fs, [7, 22, 60, 60, 46])
+cl["E4"] = DE_EXAMPLE; cl["E4"].data_type = "s"
+wb.save(f"{OUT}/documents/german/Tatort_Evidence_DE.xlsx")
 # restore English (the in-memory workbook is not saved again, but keep it tidy)
 
 # ============================================================================
