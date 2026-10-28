@@ -101,7 +101,7 @@ h3 { font-size: 19px; margin: 0 0 6px; }
 
 /* footer */
 footer { padding: 44px 0 60px; color: var(--steel); font-size: 15px; }
-footer .cols { display: grid; grid-template-columns: 2fr 1fr; gap: 28px; }
+footer .cols > div { max-width: 760px; }
 footer h3 { color: var(--paper); font-family: var(--type); font-weight: 400; text-transform: uppercase; font-size: 16px; }
 footer p { margin: 0 0 10px; }
 
@@ -245,12 +245,6 @@ footer p { margin: 0 0 10px; }
         <span class="d">The evidence workbook, Evidence Card, On Your Own guide and Cheat Sheet.</span>
         <span class="go">Download →</span>
       </a>
-      <a class="card alt" href="https://github.com/GeospatialResearchLab/workshop-data-cleaning-GenAI-R-2025">
-        <span class="tag">Next step</span>
-        <span class="t">Automate it in R</span>
-        <span class="d">The companion workshop cleans the same Tatort data in R with help from AI.</span>
-        <span class="go">View workshop →</span>
-      </a>
     </div>
     <p class="note">Your copy of the evidence stays in your OneDrive, so you can come back to it later.</p>
   </div>
@@ -264,11 +258,6 @@ footer p { margin: 0 0 10px; }
       <p>Hosted by the <strong>Digital Research and Innovation Lab</strong>, American University. Content developed and delivered by the <strong>Geospatial Research Lab</strong>. Instructor: Jessica Breen, PhD.</p>
       <p>Materials licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Cite as: Breen, J. (2026). <em>Tatort: Excel — A Forensic Guide to Data Cleaning</em>. Geospatial Research Lab, American University Library.</p>
       <p>Episode data adapted from the German Wikipedia list of <em>Tatort</em> episodes (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>), with errors planted on purpose for teaching. Please don't cite it as a source about the show.</p>
-    </div>
-    <div>
-      <h3>More workshops</h3>
-      <p><a href="https://github.com/GeospatialResearchLab/workshop-data-cleaning-excel-2025">Spark Joy in Your Data</a> (Excel)</p>
-      <p><a href="https://github.com/GeospatialResearchLab/workshop-data-cleaning-GenAI-R-2025">AI-Assisted Data Cleaning</a> (R)</p>
       <p><a href="https://github.com/GeospatialResearchLab/workshop-data-cleaning-excel-tatort-2026-sprints">Source files on GitHub</a></p>
     </div>
   </div>
@@ -282,9 +271,9 @@ footer p { margin: 0 0 10px; }
    Leave a value as "" to show a "to be announced" message instead.
    ================================================================== */
 var WORKSHOP = {
-  when: "",          // e.g. "Thursday 29 October 2026 · 12:00–12:45"
-  where: "",         // e.g. "Bender Library, Room 115"
-  evidenceLink: ""   // e.g. "https://americanuniversity-my.sharepoint.com/:x:/g/…"
+  when: "Wednesday 28 October 2026 · 3:00–4:00pm",          // e.g. "Wednesday 28 October 2026 · 3:00–4:00 pm ET"
+  where: "Digital Research and Innovation Lab, Bender Library",         // e.g. "Digital Research and Innovation Lab, Bender Library"
+  evidenceLink: "https://bit.ly/4Bx688K"   // e.g. "https://bit.ly/4Bx688K"
 };
 
 (function () {
