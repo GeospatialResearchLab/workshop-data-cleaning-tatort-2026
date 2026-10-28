@@ -69,7 +69,8 @@ Each sprint: **1-minute briefing → you work, timer on screen → checkpoint**.
 | `Tatort_Evidence` | 1,339 rows of episodes. Something is wrong with nearly every column. |
 | `Formulas` | Every formula for today, ready to copy |
 | `Known_Aliases` | Reference table: broadcaster alias → official code |
-| `Data_Dictionary` · `Case_Log` | What *clean* looks like · your record of every change |
+| `Data_Dictionary` | What each column means and what *clean* looks like |
+| `Case_Log` | Your record of every change you make |
 | `Catch_Up_2` – `Catch_Up_4` | The scene as it should look after each sprint |
 
 ::: notes
