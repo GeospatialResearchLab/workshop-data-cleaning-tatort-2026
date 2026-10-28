@@ -1,0 +1,21 @@
+{
+ "rows_before": 1339,
+ "dupes_removed": 22,
+ "rows_after_s2": 1317,
+ "titles_changed": 63,
+ "sender_check": 0,
+ "broadcasters": 15,
+ "wdr": 238,
+ "date_check": 5,
+ "impossible": [
+  "1907-12-13",
+  "1958-09-15",
+  "2030-10-12",
+  "2091-11-03",
+  "3799-12-05"
+ ],
+ "earliest": "1970-11-29",
+ "latest": "2025-10-26",
+ "near_removed": 6,
+ "rows_final": 1311
+}

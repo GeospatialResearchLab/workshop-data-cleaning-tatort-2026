@@ -1,0 +1,61 @@
+/* Print stylesheet for the cheat sheet and case file (US Letter) */
+:root { --ink:#141414; --paper:#FFFFFF; --tape:#FFD400; --blood:#B3261E; --steel:#5E6670; --rule:#D9D4CA; }
+@page { size: letter; margin: 0.55in 0.6in 0.6in; }
+html, body { background: var(--paper); color: var(--ink); }
+body { font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif; font-size: 10.5pt; line-height: 1.38; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+main.content, #quarto-content, .page-columns { display: block !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+#quarto-document-content { padding: 0 !important; }
+
+/* header band */
+.case-header { border-top: 10px solid transparent; border-image: repeating-linear-gradient(-45deg, var(--tape) 0 14px, var(--ink) 14px 28px) 10; padding-top: .5em; margin-bottom: .9em; }
+.case-header .kicker { font-family: "Special Elite", "Courier New", monospace; letter-spacing: .18em; font-size: 8.5pt; color: var(--steel); text-transform: uppercase; }
+.case-header h1 { font-family: "Special Elite", "Courier New", monospace; font-weight: 400; font-size: 26pt; margin: .05em 0 0; text-transform: uppercase; line-height: 1.1; }
+.case-header .sub { color: var(--steel); font-size: 11.5pt; margin-top: .15em; }
+#title-block-header { display: none; }
+
+h2 { font-family: "Special Elite", "Courier New", monospace; font-weight: 400; text-transform: uppercase; font-size: 13.5pt; margin: .9em 0 .35em; padding-bottom: .15em; border-bottom: 2px solid var(--ink); letter-spacing: .02em; }
+h2::before { content: ""; display: inline-block; width: .65em; height: .65em; background: var(--tape); margin-right: .45em; vertical-align: .02em; }
+h3 { font-size: 11pt; font-weight: 700; margin: .9em 0 .25em; }
+p { margin: .3em 0; }
+ul, ol { margin: .3em 0 .5em; padding-left: 1.3em; }
+li { margin: .12em 0; }
+strong { font-weight: 700; }
+
+code { font-family: "IBM Plex Mono", Menlo, monospace; font-size: .86em; background: #F3F1EC; padding: .05em .3em; border-radius: 2px; color: var(--ink); }
+pre { font-family: "IBM Plex Mono", Menlo, monospace; font-size: 8.6pt; background: #F3F1EC; border-left: 4px solid var(--tape); padding: .5em .8em; margin: .4em 0 .6em; white-space: pre-wrap; border-radius: 0; }
+pre code { background: none; padding: 0; font-size: 1em; }
+div.sourceCode { background: none; border: none; margin: 0; }
+
+table { width: 100%; border-collapse: collapse; margin: .3em 0 .6em; font-size: 8.7pt; line-height: 1.28; }
+th { text-align: left; font-weight: 700; border-bottom: 2px solid var(--ink); padding: .25em .45em; background: none; }
+td { border-bottom: 1px solid var(--rule); padding: .2em .45em; vertical-align: top; }
+td code { white-space: nowrap; }
+table.table { --bs-table-bg: transparent; }
+.table > :not(caption) > * > * { padding: .2em .45em; }
+
+.warn, .clue, .task { padding: .45em .75em; margin: .5em 0; font-size: 9.8pt; break-inside: avoid; }
+.warn { border-left: 5px solid var(--blood); background: #FBEDEB; }
+.clue { border-left: 5px solid var(--tape); background: #FFF8D6; }
+.task { border: 1.5px dashed var(--steel); }
+.warn::before, .clue::before { font-family: "Special Elite", monospace; margin-right: .4em; }
+.warn::before { content: "CAREFUL"; color: var(--blood); }
+.clue::before { content: "CLUE"; color: #8A6D00; }
+
+.box { display: inline-block; width: .8em; height: .8em; border: 1.5px solid var(--ink); margin-right: .45em; vertical-align: -.05em; }
+.answer-line { border-bottom: 1px solid var(--steel); height: 1.5em; }
+.pagebreak { break-before: page; }
+.small { font-size: 8.8pt; color: var(--steel); }
+.two-col { columns: 2; column-gap: 1.6em; }
+.two-col > * { break-inside: avoid; }
+footer, .quarto-title-meta, nav#TOC { display: none !important; }
+a { color: var(--ink); }
+
+.cheat td:first-child { white-space: nowrap; }
+.cheat td code { white-space: normal; }
+.cheat .warn, .cheat .clue { font-size: 9pt; }
+
+h2, h3 { break-after: avoid; }
+pre, .task, table { break-inside: avoid; }
+.cheat table { font-size: 8.4pt; }
+.cheat .two-col .warn, .cheat .two-col .clue { font-size: 8.5pt; padding: .35em .6em; margin: .35em 0; }
+.cheat h2 { margin-top: .7em; }

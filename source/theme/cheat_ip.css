@@ -1,0 +1,6 @@
+.cheat table { break-inside: auto; }
+.cheat tr { break-inside: avoid; }
+.cheat h2 { break-after: avoid; }
+.cheat table { font-size: 8.1pt; }
+.cheat .two-col .warn, .cheat .two-col .clue { font-size: 8.2pt; }
+.cheat .case-header .sub { font-size: 10.5pt; }

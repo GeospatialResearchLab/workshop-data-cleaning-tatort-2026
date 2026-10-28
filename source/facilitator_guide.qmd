@@ -1,0 +1,286 @@
+---
+title: "Tatort: Excel – Facilitator Guide"
+format:
+  html:
+    theme: none
+    minimal: true
+    embed-resources: true
+    css: [theme/fonts.css, theme/print.css, theme/notes.css, theme/guide.css]
+    output-file: Facilitator_Guide.html
+---
+
+::: {.case-header}
+[Instructor copy · In-person edition · 45 minutes]{.kicker}
+
+# Facilitator Guide
+
+[Room setup, the evidence link, timing, troubleshooting, and notes for every slide. [DEMO] marks a live demo in Excel.]{.sub}
+:::
+
+## The Shape of the Session
+
+Five timed sprints. Each one: a 1–1.5 minute briefing, a 3–5 minute work period with the timer on screen, and a 30-second checkpoint where you reveal the expected numbers. When the timer ends, **the room moves on together**. Anyone behind switches to the matching `Catch_Up` sheet. Everything not done in the room is documented in the *On Your Own* guide, with expected numbers so students can check themselves.
+
+| Time | Segment | Checkpoint to reveal |
+|---|---|---|
+| 0:00–4:00 | Welcome, how tonight works, the workbook | |
+| 4:00–9:00 | Pre-flight: open link, make a copy, duplicate tab | Everyone has `Working` |
+| 9:00–14:00 | Sprint 1 · Survey the scene | Clues from the room |
+| 14:00–21:00 | Sprint 2 · Clear the scene | 22 duplicates · 1,317 rows |
+| 21:00–28:00 | Sprint 3 · Hidden characters | 63 titles changed |
+| 28:00–35:00 | Sprint 4 · Unmask the aliases | 0 CHECK · 15 broadcasters · WDR 238 |
+| 35:00–42:00 | Sprint 5 · Time of the crime | 5 impossible dates · first real date 29 Nov 1970 |
+| 42:00–45:00 | What's left, habits, exit ticket | |
+
+**If you're running late:** skip the Sprint 1 checkpoint reveal (say the clues yourself in 20 seconds) and shorten Sprint 5 to the `Date_Check` count. Never cut the pre-flight: everything depends on it.
+
+## Before the Session
+
+[]{.box} **Upload the evidence** `Tatort_Evidence_InPerson.xlsx` to your OneDrive (office.com → Upload).
+
+[]{.box} **Make a view-only link:** in OneDrive, select the file → **Share** → link settings (the gear or "…") → *People in American University* (or *Anyone*) → **Can view** → Apply → **Copy link**. View-only is important: students can't accidentally edit your master, and they have to make their own copy.
+
+[]{.box} **Shorten it and make a QR code** (e.g. Chrome/Edge: right-click the page → *Create QR code*). Put both on the Pre-flight slide or on a printed sign at the door.
+
+[]{.box} **Dry run** from a student-type account: open the link → **File → Create a Copy → Create a copy online** → check the copy opens in editing mode with all eight tabs. (The menu path was verified in editing mode on an AU account. Confirm it from a view-only link before the first session.)
+
+[]{.box} **Test the formula copy routine** once in the browser you'll present from (Formulas sheet → formula bar → Ctrl/⌘ + A, C → Esc → target cell → Ctrl/⌘ + V). If pasting gives text instead of a formula, tell students to click into the formula bar of the target cell before pasting.
+
+[]{.box} **Print** one Evidence Card per student (1 page) and a few cheat sheets. The On Your Own guide is for afterwards: share the link, no need to print.
+
+[]{.box} **Open** `Slides.html` in a browser, full screen. Press **S** for speaker view.
+
+## The Sprint Timer
+
+On every "Your Turn" slide a countdown starts automatically in the top-right corner. It turns red in the last minute and shows **TIME · CHECKPOINT** at zero. **Click it** to pause or resume. Press **T** to restart it. In the PDF the timer is replaced by a static label (e.g. *⏱ 5 min*).
+
+## Troubleshooting
+
+| Symptom | Likely cause and fix |
+|---|---|
+| "View only", can't type | They're in your shared master. File → Create a Copy → Create a copy online. |
+| Copy option missing | Fallback: File → Download a copy → office.com → Upload. Costs 2 minutes. |
+| Remove Duplicates finds 0 | Junk columns (`Import_ID`) still there. Delete them, run it again. |
+| `#NAME?` | Header doesn't match the formula: `TITEL`, ` Folge`, `Sender ` with a space. Or a typo in a function name. |
+| Formula doesn't fill down | They're outside the Table. Check the new column is directly right of the table. Otherwise click the lightning icon → *Overwrite all cells*, or double-click the fill handle. |
+| Formula pasted as text | They copied the cell, not the formula bar text. Redo from the formula bar, or type `=` and paste the rest. |
+| "Browser can't access the clipboard" | The Paste ▾ menu. Use the keyboard shortcuts instead. |
+| Lots of CHECK in `Sender_Code` | Formula points at the wrong sheet or `TRIM` was left out. Recopy it. |
+| Dates show as numbers or `#####` | Home → Number Format → Short Date; widen the column. |
+| Counters give 0 | They're working in a `Catch_Up` sheet: replace `Working` in the counter with that sheet's name. |
+| Wrecked `Working` | Jump to the latest `Catch_Up` sheet. Their `Tatort_Evidence` is untouched, and File → Version History can roll back the whole file. |
+
+## Slide-by-Slide Notes
+
+::: {.note-slide}
+### <span class="num">2</span> Sonntag, 20:15 Uhr
+
+**0:00–2:00 · Welcome + hook**
+
+- While people sit down, the link to the evidence file should already be on screen or in the chat (see the Facilitator Guide). Ask everyone to sign in to office.com now.
+- Quick show of hands: anyone watched Tatort? Real, big, multilingual data assembled by many hands over 55 years. That's exactly how messy data happens.
+- Fun fact from the dataset: episode 25, *Tote Taube in der Beethovenstraße* (1973), was directed by Samuel Fuller and ran in US cinemas.
+- Hand out the Evidence Card now, one per person.
+:::
+
+::: {.note-slide}
+### <span class="num">3</span> How Tonight Works
+
+**2:00–3:00 · How tonight works**
+
+- This is the contract with the room. Short briefings, then they work on their own while the timer runs. When the timer hits zero, we all compare numbers and move on together, wherever you are.
+- Stress the catch-up sheets: nobody is left behind for more than one sprint. Falling behind is normal, not failure.
+- Some of the case is left for later. The "On Your Own" guide documents every remaining step.
+:::
+
+::: {.note-slide}
+### <span class="num">4</span> Meet the Evidence
+
+**3:00–4:00 · Tour of the workbook**
+
+- Point out the Formulas sheet and how to copy from it: click the green cell, click in the formula bar, Ctrl/⌘+A then Ctrl/⌘+C, Esc. Click the target cell, Ctrl/⌘+V. Demo it once in Sprint 3; don't spend time on it now.
+- The grey tabs at the end are the catch-up sheets. Don't open them yet: they're spoilers for the next sprint.
+- The data is real, but errors were planted deliberately. Don't cite it as a source of Tatort facts!
+:::
+
+::: {.note-slide}
+### <span class="num">5</span> Pre-flight 
+
+**4:00–9:00 · Pre-flight (4-min timer + 1 min slack)**
+
+- This is where in-person workshops lose 10 minutes. Have the link on screen as a QR code and a short URL, and in the room chat if there is one.
+- The shared file is view-only. Everyone must make their own copy; if anyone sees "Editing" on the shared file itself, stop them (the Facilitator Guide explains how to set the link to view-only so this can't happen).
+- If the copy option is missing for someone, fallback: File → Download, then upload to their own OneDrive (office.com → Upload).
+- Duplicate tab = chain of custody. In the browser there's no "close without saving".
+- Walk the room. When most hands are up, move on. Anyone still stuck: pair them with a neighbour for now and come back to them.
+:::
+
+::: {.note-slide}
+### <span class="num">6</span> Sprint 1 · Look Before You Touch
+
+**9:00–10:00 · Briefing (1 min)**
+
+- [DEMO, 30 s] Data → Filter, open the `Sender` drop-down: `wdr`, `W.D.R.`, `Westdeutscher Rundfunk`… That's the moment that sells filters.
+- Don't fix anything in this sprint. Just look.
+:::
+
+::: {.note-slide}
+### <span class="num">7</span> Sprint 1: Survey the Scene 
+
+**10:00–13:00 · Work (3 min)**
+
+- Walk the room. Look for people who are lost in the ribbon: point them to the search box.
+- Early finishers: find a fourth and fifth clue, or compare `LEN` of a few titles.
+:::
+
+::: {.note-slide}
+### <span class="num">8</span> Checkpoint 1 
+
+**13:00–14:00 · Checkpoint (1 min)**
+
+- Take 3–4 clues from the room, then reveal the list one line at a time (each click shows the next).
+- Name the plan: sprint 2 clears the scene, 3 hidden characters, 4 aliases, 5 dates. Everything else is documented for later.
+:::
+
+::: {.note-slide}
+### <span class="num">9</span> Sprint 2 · Clear the Scene
+
+**14:00–15:30 · Briefing (1.5 min)**
+
+- Why title rows matter: they break filters, tables and pivot tables.
+- Why a Table: from Sprint 3 on, every formula fills down the whole column by itself. That's what makes this doable in 45 minutes.
+- Remove Duplicates with all columns = only rows identical in every cell. Choosing fewer columns is a judgement call about what "the same record" means.
+:::
+
+::: {.note-slide}
+### <span class="num">10</span> Sprint 2: Clear the Scene 
+
+**15:30–20:30 · Work (5 min)**
+
+- Common trap: deleting the junk columns *after* Remove Duplicates. `Import_ID` is different on every row, so Excel finds 0 duplicates. Order matters: clear the scene first.
+- Headers matter now because the formulas in the next sprints use them by name (`[@Titel]`). A header with a stray space breaks the formula.
+- Ignore the yellow highlights for now (On Your Own guide).
+:::
+
+::: {.note-slide}
+### <span class="num">11</span> Checkpoint 2 
+
+**20:30–21:00 · Checkpoint (30 s)**
+
+- Hands up for 22. Anyone with a different number: switch to Catch_Up_2 now and carry on. Fix the mistake later, not now.
+- Catch_Up sheets are already Tables, so new columns fill down there too.
+:::
+
+::: {.note-slide}
+### <span class="num">12</span> Sprint 3 · Hidden Characters
+
+**21:00–22:30 · Briefing + the one demo that matters (1.5 min)**
+
+- [DEMO] The copy routine from the Formulas sheet, once, slowly: click the green cell → click in the formula bar → Ctrl/⌘+A, Ctrl/⌘+C → Esc → type `Titel_Clean` in the first empty header cell to the right of the table → Enter → click the cell below → Ctrl/⌘+V → Enter. The whole column fills.
+- If the column doesn't fill by itself: a small lightning icon offers "Overwrite all cells in this column". Or double-click the fill handle.
+- We keep the helper columns rather than pasting values back. Fewer steps, and the original stays beside the clean version for comparison. The On Your Own guide shows how to swap them in at the end.
+:::
+
+::: {.note-slide}
+### <span class="num">13</span> Sprint 3: Hidden Characters 
+
+**22:30–27:30 · Work (5 min)**
+
+- Seeing `#NAME?` usually means a header doesn't match: `Titel` vs `TITEL`, or a stray space. Check the header row.
+- If someone typed `CHAR(160)` instead of `UNICHAR(160)` and sees fewer changes, that's the first thing to check.
+- Fast finishers: filter `Titel_Clean` for a title that changed and compare it with the original in the formula bar.
+:::
+
+::: {.note-slide}
+### <span class="num">14</span> Checkpoint 3 
+
+**27:30–28:00 · Checkpoint (30 s)**
+
+- 63 is the number. 57 or 51 means the non-breaking spaces or the double spaces weren't caught.
+- Clear the TRUE filter before the next sprint (Data → Clear, or the filter drop-down → Clear Filter).
+:::
+
+::: {.note-slide}
+### <span class="num">15</span> Sprint 4 · Unmask the Aliases
+
+**28:00–29:30 · Briefing (1.5 min)**
+
+- Read XLOOKUP aloud in plain English: "look up this broadcaster in column A of Known_Aliases and bring back its code from column B; if it isn't there, write CHECK."
+- XLOOKUP ignores capitalisation, so `wdr` matches `WDR`. That's why the alias list doesn't need every case variant.
+- The empty arguments (`, , , ,`) skip options we don't need. The last one says "if there's no slash, use the whole cell". They'll copy it, not type it.
+- The reference-table idea is the most transferable skill of the night: majors, country names, department codes, survey answers…
+:::
+
+::: {.note-slide}
+### <span class="num">16</span> Sprint 4: Unmask the Aliases 
+
+**29:30–34:30 · Work (5 min)**
+
+- The counters use column letters (K, L, N), which is why everyone adds the columns in the same order. In a Catch_Up sheet, replace `Working` with the sheet name.
+- Anyone with lots of CHECK: they probably skipped the `TRIM` (trailing spaces) or the formula points at the wrong sheet.
+- Fast finishers: Insert → PivotTable → `Sender_Code` in Rows and in Values. A whole broadcaster count in 20 seconds (On Your Own, Lead H).
+:::
+
+::: {.note-slide}
+### <span class="num">17</span> Checkpoint 4 
+
+**34:30–35:00 · Checkpoint (30 s)**
+
+- 238 for WDR. (None of the 6 remaining near-duplicates is a WDR episode, so this number is already final.)
+- Clear the filter before the last sprint.
+:::
+
+::: {.note-slide}
+### <span class="num">18</span> Sprint 5 · Time of the Crime
+
+**35:00–36:30 · Briefing (1.5 min)**
+
+- Excel stores dates as numbers: days since 1900. So `25901` is 29 November 1970, the very first Tatort.
+- DATEVALUE guesses using the computer's regional settings; DATE never guesses.
+- The formula on the Formulas sheet uses LET: `d` is a nickname for the date cell so it doesn't have to be repeated. Read it aloud: already a date? keep it. Third character a dot? German. Otherwise ISO.
+- Plausibility checks are the habit: you can't always know the right value, but you can know an impossible one. Don't guess a fix; flag it.
+:::
+
+::: {.note-slide}
+### <span class="num">19</span> Sprint 5: Time of the Crime 
+
+**36:30–41:30 · Work (5 min)**
+
+- A date showing as `#####` just means the column is too narrow: double-click the column border.
+- One impossible date comes out as the year 3799: the typo `1899` plus Excel's rule that years below 1900 get 1900 added. A great "don't trust the output" moment if someone spots it.
+- Don't fix the impossible dates. Flag them in the Case Log; the right date has to come from a source.
+:::
+
+::: {.note-slide}
+### <span class="num">20</span> Checkpoint 5 
+
+**41:30–42:00 · Checkpoint (30 s)**
+
+- If the first date is in 1907 or 1958, they sorted before filtering out the CHECK rows. That's the point: the impossible ones float to the top.
+:::
+
+::: {.note-slide}
+### <span class="num">21</span> Case Not Closed (Yet)
+
+**42:00–43:00 · What's left**
+
+- Each lead takes 3–5 minutes with the guide; they can do it tonight while it's fresh. The guide has the formulas and the expected numbers, so they can check themselves.
+- Their copy stays in their OneDrive, so they can pick up exactly where they left off.
+:::
+
+::: {.note-slide}
+### <span class="num">22</span> Good Habits
+
+**43:00–44:00 · Wrap-up**
+
+- These habits carry straight over to R, Python or anything else. Mention the R + AI workshop for anyone who wants to automate this.
+:::
+
+::: {.note-slide}
+### <span class="num">23</span> Before You Go 
+
+**44:00–45:00 · Exit ticket**
+
+- Collect the cards at the door. They tell you what stuck and what to fix next time.
+- Remind people the guide and cheat sheet are in the repo, CC BY 4.0.
+:::

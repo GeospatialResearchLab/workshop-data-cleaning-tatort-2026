@@ -1,0 +1,106 @@
+---
+title: "Tatort: Excel – Evidence Card"
+format:
+  html:
+    theme: none
+    minimal: true
+    embed-resources: true
+    css: [theme/fonts.css, theme/print.css, theme/card.css]
+    output-file: Evidence_Card.html
+---
+
+::: {.case-header}
+[Ermittlungsakte Nr. 1311 · Evidence Card · In-person, 45 minutes]{.kicker}
+
+# The Corrupted Episode List
+
+[Work in **your copy** of the evidence. Every formula is on the `Formulas` sheet. Fell behind? Switch to the `Catch_Up` tab named on screen and keep going.]{.sub}
+:::
+
+::: {.howto}
+**Copying a formula:** click the green cell in `Formulas` → click in the formula bar → **Ctrl/⌘ + A**, **Ctrl/⌘ + C** → **Esc**. Type the new column name in the first empty header cell to the right of your table → **Enter** → click the cell below it → **Ctrl/⌘ + V** → **Enter**.
+:::
+
+::: {.grid}
+
+::: {.sprint}
+### Pre-flight
+
+[]{.box} Open the evidence link, then **File → Create a Copy → Create a copy online**
+
+[]{.box} Right-click `Tatort_Evidence` → **Duplicate** → rename to `Working`
+:::
+
+::: {.sprint}
+### 1 · Survey the Scene
+
+[]{.box} **Data → Filter**. Open the drop-downs. Three clues:
+
+1. <span class="line"></span>
+2. <span class="line"></span>
+3. <span class="line"></span>
+:::
+
+::: {.sprint}
+### 2 · Clear the Scene
+
+[]{.box} Delete rows 1–3 and `Import_ID`, `Bearbeitet_von`, `Spalte1`
+
+[]{.box} Fix headers: `Folge`, `Titel`, `Sender`
+
+[]{.box} **Insert → Table** · **Data → Remove Duplicates**
+
+Removed <span class="blank"></span> Rows left <span class="blank"></span>
+:::
+
+::: {.sprint}
+### 3 · Hidden Characters
+
+[]{.box} New columns `Titel_Clean`, `Titel_Changed`
+
+[]{.box} Counter **Titles changed** → `Case_Log`, column H
+
+Titles changed <span class="blank"></span>
+
+[Behind? → `Catch_Up_2`]{.behind}
+:::
+
+::: {.sprint}
+### 4 · Unmask the Aliases
+
+[]{.box} New column `Sender_Code`
+
+[]{.box} Counters **Unknown aliases** and **WDR episodes**
+
+CHECK <span class="blank"></span> Broadcasters <span class="blank"></span> WDR <span class="blank"></span>
+
+[Behind? → `Catch_Up_3`]{.behind}
+:::
+
+::: {.sprint}
+### 5 · Time of the Crime
+
+[]{.box} New column `Date_Clean` → **Home → Number Format → Short Date**
+
+[]{.box} New column `Date_Check` · counter **Impossible dates**
+
+[]{.box} Sort `Date_Clean` oldest → newest
+
+Impossible <span class="blank"></span> First real date <span class="blank wide"></span>
+
+[Behind? → `Catch_Up_4`]{.behind}
+:::
+
+:::
+
+::: {.after}
+**Case not closed yet?** The *On Your Own* guide documents every remaining lead (episode numbers, the last six duplicates, writers, directors, ALL CAPS titles, investigators, PivotTable check, CSV export), with formulas and the numbers to expect. Find it with the other materials at **github.com/GeospatialResearchLab/workshop-data-cleaning-excel-tatort-2026-inperson**
+:::
+
+::: {.exit}
+### Before you go
+
+**One technique I'll use on my own data (and which data):** <span class="line"></span><span class="line"></span>
+
+**One thing that's still a mystery:** <span class="line"></span><span class="line"></span>
+:::

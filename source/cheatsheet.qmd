@@ -1,0 +1,123 @@
+---
+title: "Tatort: Excel – Cheat Sheet"
+format:
+  html:
+    theme: none
+    minimal: true
+    embed-resources: true
+    css: [theme/fonts.css, theme/print.css, theme/cheat_ip.css]
+    output-file: Cheatsheet.html
+---
+
+::: {.cheat}
+
+::: {.case-header}
+[Ermittlungsakte · Case file reference · Excel for the web · In-person edition]{.kicker}
+
+# Tatort: Excel
+
+[A Forensic Guide to Data Cleaning. Keep this next to you during the investigation, and afterwards.]{.sub}
+:::
+
+## The Investigation
+
+| Step | Action | Why it matters |
+|---|---|---|
+| **0 · Secure the Scene** | Duplicate the raw sheet and work only on the copy. AutoSave is always on! Start a case log. | The original is your evidence. If anything goes wrong, you can always go back. |
+| **1 · Survey the Scene** | Scroll everything. Freeze panes, turn on filters, open every drop-down. Note clues. | You can't fix what you haven't noticed. Look before you touch. |
+| **2 · Open the Case File** | Write the order of operations. Log every change: what, why, how verified. | A plan makes the work repeatable, for colleagues and for future you. |
+| **3 · Clear the Scene** | Delete junk rows above the header, irrelevant columns and exact duplicates. | Less to clean, fewer distractions. |
+| **4 · Process the Evidence** | Fix spaces & hidden characters, data types, dates, case, missing-value placeholders. | Hidden problems break sorting, lookups, math and de-duplication. |
+| **5 · Identify the Suspects** | Split combined columns, unmask aliases with a reference table, add validation. | One fact per column; one spelling per category. |
+| **6 · Cross-Examine** | Remove duplicates again. Pivot tables, sorting and conditional formatting. | Confirms the cleaned data tells a consistent story. |
+| **7 · Close the Case** | Save a clean copy, download a CSV, update the data dictionary, keep the case log. | Clean data is only useful if others can find, trust and reuse it. |
+
+## Where to Find It (Excel for the Web)
+
+| Tool | Location |
+|---|---|
+| Open a shared file | Open the link → File → Create a Copy → Create a copy online (your copy lives in your OneDrive) |
+| Open your own file | office.com → Excel → Upload a file |
+| Copy a sheet | Right-click sheet tab → Duplicate |
+| Freeze header row | View → Freeze Panes → Freeze Top Row |
+| Filter | Data → Filter (or Home → Sort & Filter) |
+| Make a Table | Click in the data → Insert → Table. New formula columns fill down by themselves |
+| Find blanks | Filter a column → tick only (Blanks); count with `=COUNTBLANK(range)` |
+| Find & Replace | Home → Find & Select → Replace (Ctrl/⌘ + H) → Search options |
+| Remove Duplicates | Data → Remove Duplicates |
+| Highlight duplicates | Home → Conditional Formatting → Highlight Cells Rules → Duplicate Values |
+| Split a column | `TEXTBEFORE` / `TEXTAFTER` / `TEXTSPLIT`, or search for *Split Text to Columns* |
+| Paste as values | Copy, then **Ctrl/⌘ + Shift + V** (the Paste ▾ menu usually can't reach the clipboard in the browser) |
+| Numbers stored as text | Helper column with `=VALUE()`, then Paste Values |
+| Restrict entries | Data → Data Validation |
+| Spot-check | Insert → PivotTable; Home → Conditional Formatting |
+| Save a copy | File → Create a Copy → Create a copy online |
+| Download a CSV | File → Export → Download as CSV UTF-8 |
+| Roll back a disaster | File → Version History |
+| Can't find a button? | Type its name in the search box at the top of Excel |
+
+## Handy Functions
+
+| Function | What it does | Example from the Tatort case |
+|---|---|---|
+| `TRIM` | Removes leading, trailing and double spaces | `=TRIM(B2)` |
+| `CLEAN` | Removes non-printing characters (line breaks, …) | `=TRIM(CLEAN(B2))` |
+| `SUBSTITUTE` | Replaces specific text inside a cell | `=SUBSTITUTE(G2, CHAR(10), ", ")` |
+| `UNICHAR` | Any character by its Unicode number | `=TRIM(SUBSTITUTE(B2, UNICHAR(160), " "))` |
+| `LEN` | Counts characters, including invisible ones | `=LEN(B2)` |
+| `ISNUMBER` / `ISTEXT` | Reveals a cell's real data type | `=ISNUMBER(A2)` |
+| `LET` | Gives a value a short name inside a formula | `=LET(d, [@Erstausstrahlung], IF(ISNUMBER(d), d, …))` |
+| `VALUE` | Turns number-looking text into a number | `=VALUE(SUBSTITUTE(A2, "#", ""))` |
+| `DATE` | Builds a real date from year, month, day | `=DATE(RIGHT(D2,4), MID(D2,4,2), LEFT(D2,2))` |
+| `TEXT` | Formats a number/date as text | `=TEXT(D2, "yyyy-mm-dd")` |
+| `UPPER` / `LOWER` / `PROPER` | Changes capitalisation | `=PROPER(B2)` (check the result!) |
+| `EXACT` | Case-sensitive comparison | `=EXACT(B2, UPPER(B2))` flags ALL CAPS |
+| `LEFT` / `RIGHT` / `MID` | Pulls characters from a position | `=LEFT(E2, FIND("(", E2) - 1)` |
+| `FIND` / `SEARCH` | Position of text (case-sensitive / not) | `=FIND("(", E2)` |
+| `TEXTBEFORE` / `TEXTAFTER` | Text before/after a delimiter | `=TEXTBEFORE(C2, "/", , , , C2)` |
+| `TEXTSPLIT` | Splits into several cells | `=TEXTSPLIT(C2, "/")` |
+| `CONCAT` / `&` / `TEXTJOIN` | Combines text | `=A2 & " – " & B2` |
+| `IFERROR` | Fallback when a formula errors | `=IFERROR(LEFT(E2, FIND("(",E2)-1), E2)` |
+| `XLOOKUP` / `VLOOKUP` | Looks up a value in a reference table | `=XLOOKUP(C2, Known_Aliases!A:A, Known_Aliases!B:B, "CHECK")` |
+| `COUNTIF` | Counts matches: finds duplicates | `=COUNTIF(A:A, A2) > 1` |
+| `ROUND` / `ROUNDUP` / `ROUNDDOWN` | Changes the stored value, not just the display | `=ROUND(H2, 0)` |
+
+
+## Known Tricks of the Trade
+
+::: {.two-col}
+::: {.warn}
+**TRIM and CLEAN miss the non-breaking space** (character 160). Use `SUBSTITUTE(…, UNICHAR(160), " ")` first. `UNICHAR` means the same thing everywhere.
+:::
+
+::: {.warn}
+**Find & Replace replaces text inside cells** (`-` in *Schulze-Rohr*!) and treats `?` and `*` as wildcards. For placeholders, use `=IF(OR(G2="n/a", G2="-"), "", G2)` instead.
+:::
+
+::: {.warn}
+**`DATEVALUE` follows your computer's regional settings.** `DATE(year, month, day)` never guesses, so build dates explicitly.
+:::
+
+::: {.warn}
+**`PROPER` doesn't speak German** (*Taxi nach Leipzig*) and breaks genuine acronyms (*KI*). Flag, then review.
+:::
+
+::: {.clue}
+**Same value ≠ duplicate.** Three different episodes are called *Die Abrechnung*. Decide which columns define "the same record".
+:::
+
+::: {.clue}
+**Helper-column routine:** add a column to the Table → formula (it fills down) → check (`LEN`, filters, counts) → keep it beside the original. At the very end, in a copy: Paste Values over the original, delete helpers, log it.
+:::
+
+::: {.clue}
+**In a Table,** `[@Titel]` = this row's `Titel`; `[Titel]` = the whole column. Click a cell while writing a formula and Excel writes the reference for you.
+:::
+
+::: {.clue}
+**Clean, then de-duplicate again.** Near-duplicates only match once spaces and spellings are fixed.
+:::
+:::
+
+
+:::

@@ -1,0 +1,43 @@
+<div id="sprint-timer" title="Click to pause / resume · press T to restart"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var t = document.getElementById("title-slide");
+  if (t) {
+    var band = document.createElement("div");
+    band.className = "tape-band";
+    band.textContent = "TATORT · POLIZEIABSPERRUNG · NICHT BETRETEN · CRIME SCENE · DO NOT CROSS · TATORT · POLIZEIABSPERRUNG · NICHT BETRETEN · CRIME SCENE";
+    t.appendChild(band);
+  }
+});
+(function () {
+  var el = document.getElementById("sprint-timer");
+  var left = 0, total = 0, tick = null, paused = false;
+  function fmt(s) { var m = Math.floor(s / 60), r = s % 60; return m + ":" + (r < 10 ? "0" : "") + r; }
+  function draw() {
+    el.textContent = left > 0 ? fmt(left) : "TIME · CHECKPOINT";
+    el.className = "on" + (left <= 60 ? " late" : "") + (left <= 0 ? " done" : "") + (paused ? " paused" : "");
+    el.style.setProperty("--pct", total ? (100 * left / total) + "%" : "0%");
+  }
+  function stop() { clearInterval(tick); tick = null; }
+  function start(sec) {
+    stop(); total = left = sec; paused = false; draw();
+    tick = setInterval(function () { if (!paused && left > 0) { left--; draw(); } }, 1000);
+  }
+  function check(slide) {
+    var s = slide && slide.getAttribute("data-timer");
+    if (s) { start(parseInt(s, 10)); } else { stop(); el.className = ""; }
+  }
+  el.addEventListener("click", function () { paused = !paused; draw(); });
+  function hook() {
+    if (!window.Reveal || !Reveal.on) { return setTimeout(hook, 200); }
+    if (/print-pdf/.test(location.search)) { return; }
+    Reveal.on("ready", function (e) { check(e.currentSlide); });
+    Reveal.on("slidechanged", function (e) { check(e.currentSlide); });
+    Reveal.addKeyBinding({ keyCode: 84, key: "T", description: "Restart sprint timer" }, function () {
+      check(Reveal.getCurrentSlide());
+    });
+    if (Reveal.isReady && Reveal.isReady()) { check(Reveal.getCurrentSlide()); }
+  }
+  hook();
+})();
+</script>

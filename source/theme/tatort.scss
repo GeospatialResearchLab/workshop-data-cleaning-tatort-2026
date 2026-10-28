@@ -1,0 +1,173 @@
+/*-- scss:defaults --*/
+$ink:    #141414;
+$paper:  #F4EFE6;
+$tape:   #FFD400;
+$blood:  #E0453A;
+$steel:  #9AA3AD;
+
+$body-bg: $ink;
+$body-color: $paper;
+$link-color: $tape;
+$font-family-sans-serif: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: "IBM Plex Mono", Menlo, Consolas, monospace;
+$presentation-heading-font: "Special Elite", "Courier New", monospace;
+$presentation-heading-color: $paper;
+$presentation-heading-text-transform: uppercase;
+$presentation-heading-font-weight: 400;
+$presentation-heading-letter-spacing: 0.02em;
+$presentation-font-size-root: 36px;
+$presentation-h2-font-size: 1.45em;
+$code-block-bg: #1E1E1E;
+$code-color: $tape;
+$selection-bg: $tape;
+
+/*-- scss:rules --*/
+
+/* crime-scene tape running along the top of every slide */
+.reveal .slides section.slide.level2::before {
+  content: "";
+  position: absolute; left: -60px; right: -60px; top: -38px; height: 14px;
+  background: repeating-linear-gradient(-45deg, $tape 0 22px, $ink 22px 44px);
+  opacity: .9;
+}
+
+.reveal { font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif; }
+.reveal h2 { border-bottom: 2px solid rgba($paper, .15); padding-bottom: .25em; margin-bottom: .6em; }
+.reveal .subtitle-line { font-family: "Special Elite", monospace; color: $tape; font-size: .8em; margin-top: -.4em; }
+.reveal strong { color: $tape; font-weight: 600; }
+.reveal em { color: $steel; }
+.reveal ul li { margin-bottom: .35em; }
+.reveal li::marker { color: $tape; }
+.reveal .small { font-size: .7em; }
+.reveal .muted { color: $steel; }
+
+/* formulas */
+.reveal pre { box-shadow: none; border-left: 6px solid $tape; width: 100%; font-size: .62em; }
+.reveal pre code { font-size: 1em; line-height: 1.5; padding: .6em .9em; max-height: none; color: $paper; background: #1E1E1E; }
+.reveal code { color: $tape; }
+.reveal .fn { color: $tape; }
+
+/* title slide */
+#title-slide { text-align: left; }
+#title-slide .title { font-size: 2.4em; color: $paper; margin-top: 1.4em; }
+#title-slide .subtitle { font-family: "Source Sans 3", sans-serif; text-transform: none; color: $tape; font-size: 1.05em; }
+#title-slide .quarto-title-authors, #title-slide .date { font-size: .7em; color: $steel; }
+.tape-band {
+  position: absolute; left: -12%; width: 124%; top: 78%;
+  transform: rotate(-6deg);
+  background: $tape; color: $ink;
+  font-family: "Special Elite", monospace; font-size: .62em; letter-spacing: .25em;
+  padding: .3em 0; white-space: nowrap; overflow: hidden; text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,.5);
+}
+
+/* evidence-marker section headers */
+.reveal .slides section.step { text-align: left; }
+.reveal .marker {
+  display: inline-block; width: 2.2em; height: 1.9em; line-height: 2.05em;
+  background: $tape; color: $ink; text-align: center;
+  font-family: "Source Sans 3", sans-serif; font-weight: 700; font-size: 1.8em;
+  clip-path: polygon(14% 0, 86% 0, 100% 100%, 0 100%);
+  margin-bottom: .3em;
+}
+.reveal section.step h2 { border: none; font-size: 1.9em; margin-bottom: .2em; }
+.reveal section.step p { color: $steel; font-size: 1.05em; }
+
+/* clue / action call-outs */
+.clue, .action, .warn {
+  border-radius: 4px; padding: .45em .8em; margin: .35em 0; font-size: .82em;
+}
+.clue   { background: rgba($tape, .10); border-left: 6px solid $tape; }
+.action { background: rgba($paper, .06); border-left: 6px solid $steel; }
+.warn   { background: rgba($blood, .14); border-left: 6px solid $blood; }
+.clue::before   { content: "CLUE  ";   font-family: "Special Elite", monospace; color: $tape; }
+.action::before { content: "ACTION  "; font-family: "Special Elite", monospace; color: $steel; }
+.warn::before   { content: "CAREFUL  "; font-family: "Special Elite", monospace; color: $blood; }
+
+/* tables */
+.reveal table { font-size: .74em; width: 100%; border-collapse: collapse; }
+.reveal table th { color: $tape; font-weight: 600; border-bottom: 2px solid $tape !important; text-align: left; }
+.reveal table td { border-bottom: 1px solid rgba($paper, .12) !important; vertical-align: top; }
+
+.reveal .slide-number { color: $steel; background: transparent; font-family: "IBM Plex Mono", monospace; }
+.reveal .footer { color: $steel; font-family: "Special Elite", monospace; font-size: .45em; }
+.reveal .step-title {
+  display: block; font-family: "Special Elite", "Courier New", monospace;
+  text-transform: uppercase; font-size: 1.9em; color: $paper; line-height: 1.1; margin: .1em 0 .3em;
+}
+.reveal section.step .marker { display: block; }
+
+.reveal section.dense table { font-size: .62em; }
+.reveal section.dense table td:first-child, .reveal section.dense table th:first-child { width: 1%; white-space: nowrap; padding-right: 1.2em; }
+#title-slide { top: 0 !important; height: 100%; }
+#title-slide .quarto-title-authors { margin-top: 1.2em; justify-content: flex-start; }
+#title-slide .quarto-title-author { padding-left: 0; }
+
+/* hands-on "Your Turn" slides */
+.reveal .slides section.your-turn { background: linear-gradient(90deg, rgba($tape,.10), rgba($tape,0) 40%); }
+.reveal section.your-turn h2 { color: $tape; border-bottom-color: rgba($tape,.5); }
+.reveal section.your-turn h2::before {
+  content: "YOUR TURN"; display: inline-block; background: $tape; color: $ink;
+  font-family: "Source Sans 3", sans-serif; font-weight: 700; font-size: .42em; letter-spacing: .12em;
+  padding: .2em .55em; margin-right: .7em; vertical-align: .35em;
+}
+.reveal section.your-turn h2 .yt-strip { display: none; }
+.reveal .casefile-ref {
+  display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: .5em;
+  color: $ink; background: $paper; padding: .25em .7em; margin: -.3em 0 .5em; letter-spacing: .03em;
+}
+.reveal section.your-turn .clue, .reveal section.your-turn .action, .reveal section.your-turn .warn { padding: .3em .8em; margin: .3em 0; }
+.reveal .clue p, .reveal .action p, .reveal .warn p { margin: .1em 0; }
+
+/* ---------- in-person edition ---------- */
+#sprint-timer { display: none; }
+#sprint-timer.on {
+  display: block; position: fixed; top: 22px; right: 28px; z-index: 50; cursor: pointer;
+  font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 46px; line-height: 1;
+  color: $ink; background: $tape; padding: 12px 22px 14px; border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.45);
+  background-image: linear-gradient(90deg, rgba($ink,.18) var(--pct), transparent var(--pct));
+}
+#sprint-timer.late { background-color: $blood; color: $paper; }
+#sprint-timer.done { font-size: 26px; padding: 16px 20px; }
+#sprint-timer.paused { opacity: .55; }
+
+.reveal .timer-static {
+  display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: .5em; font-weight: 600;
+  color: $ink; background: $tape; padding: .2em .6em; margin: -.3em .4em .5em 0;
+}
+.reveal .behind {
+  display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: .5em;
+  color: $paper; border: 1px solid $steel; padding: .2em .6em; margin: -.3em 0 .5em;
+}
+
+/* sprint briefing slides */
+.reveal h2 .tag {
+  display: inline-block; background: $paper; color: $ink;
+  font-family: "Source Sans 3", sans-serif; font-weight: 700; font-size: .42em; letter-spacing: .12em;
+  padding: .2em .55em; margin-right: .7em; vertical-align: .35em; text-transform: uppercase;
+}
+.reveal section.your-turn h2 .tag { background: $tape; }
+.reveal ol.moves { counter-reset: mv; list-style: none; padding-left: 0; margin-left: 0; }
+.reveal ol.moves > li { counter-increment: mv; position: relative; padding-left: 1.6em; margin-bottom: .45em; font-size: .9em; }
+.reveal ol.moves > li::before {
+  content: counter(mv); position: absolute; left: 0; top: .1em; width: 1.15em; height: 1.15em; line-height: 1.15em;
+  text-align: center; background: $tape; color: $ink; font-weight: 700; font-size: .85em; border-radius: 50%;
+}
+
+/* checkpoint slides */
+.reveal section.checkpoint { text-align: left; }
+.reveal section.checkpoint h2 { color: $tape; }
+.reveal .cp-grid { display: grid; grid-template-columns: repeat(var(--n, 3), 1fr); gap: .6em; margin: .4em 0 .8em; }
+.reveal .cp-grid > p { margin: 0; }
+.reveal .cp { display: block; height: 100%; box-sizing: border-box; background: rgba($paper,.05); border: 1px solid rgba($paper,.15); border-top: 5px solid $tape; padding: .45em .6em .55em; }
+.reveal .cp .q { display: block; font-size: .5em; color: $steel; text-transform: uppercase; letter-spacing: .08em; }
+.reveal .cp .a { display: block; font-family: "Special Elite", monospace; font-size: 1.5em; color: $paper; line-height: 1.15; margin-top: .1em; }
+.reveal .cp .n { display: block; font-size: .48em; color: $steel; margin-top: .25em; line-height: 1.3; }
+
+/* agenda */
+.reveal .agenda td:first-child { font-family: "IBM Plex Mono", monospace; color: $steel; white-space: nowrap; width: 1%; padding-right: 1.2em; }
+.reveal .agenda td:last-child { font-family: "IBM Plex Mono", monospace; color: $tape; white-space: nowrap; width: 1%; text-align: right; }
+
+.reveal .agenda table { font-size: .72em; }
+.reveal .agenda thead { display: none; }

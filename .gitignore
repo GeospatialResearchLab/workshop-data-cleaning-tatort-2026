@@ -1,0 +1,11 @@
+# Mac OS files
+.DS_Store
+
+# Excel lock / temp files
+~$*.xlsx
+~$*.xls
+
+# Quarto render artefacts
+source/*.html
+source/*_files/
+source/.quarto/
