@@ -21,7 +21,7 @@ Every messy spreadsheet is a crime scene. In this fast-paced, hands-on workshop 
 - **Evidence Card – one page for the session (PDF):** [`Evidence_Card.pdf`](documents/Evidence_Card.pdf)
 - **On Your Own – finishing the case after the session (PDF):** [`On_Your_Own.pdf`](documents/On_Your_Own.pdf)
 - **Data Cleaning Cheat Sheet (PDF):** [`Cheatsheet.pdf`](documents/Cheatsheet.pdf)
-- **The evidence (XLSX):** [`Tatort_Evidence_InPerson.xlsx`](documents/workshop_materials/Tatort_Evidence_InPerson.xlsx)
+- **The evidence (XLSX):** [`Tatort_Evidence.xlsx`](documents/workshop_materials/Tatort_Evidence.xlsx)
 - **Everything for participants (ZIP):** [`workshop_materials.zip`](documents/workshop_materials.zip)
 
 Instructor materials (facilitator guide, answer key, solved workbook, cleaned CSV) are in [`documents/instructor/`](documents/instructor/).
@@ -37,7 +37,7 @@ Instructor materials (facilitator guide, answer key, solved workbook, cleaned CS
 
 **Instructor**
 
-- Upload `Tatort_Evidence_InPerson.xlsx` to your OneDrive and share a **view-only** link (students make their own copy in the room)
+- Upload `Tatort_Evidence.xlsx` to your OneDrive and share a **view-only** link (students make their own copy in the room)
 - Add the link or a QR code to the Pre-flight slide, and print one Evidence Card per participant
 - Full checklist: [`documents/instructor/Facilitator_Guide.pdf`](documents/instructor/Facilitator_Guide.pdf)
 
@@ -73,7 +73,7 @@ documents/
 ├── Cheatsheet.pdf                    2-page reference
 ├── workshop_materials.zip            Evidence + Evidence Card + On Your Own + Cheat Sheet
 ├── workshop_materials/
-│   └── Tatort_Evidence_InPerson.xlsx Evidence, Formulas, Known_Aliases, Data_Dictionary,
+│   └── Tatort_Evidence.xlsx Evidence, Formulas, Known_Aliases, Data_Dictionary,
 │                                     Case_Log and Catch_Up_2 – Catch_Up_4 sheets
 └── instructor/
     ├── Facilitator_Guide.pdf         Setup, timing, troubleshooting, notes for every slide

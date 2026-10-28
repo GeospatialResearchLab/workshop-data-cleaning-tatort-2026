@@ -12,7 +12,7 @@ format:
 ::: {.cheat}
 
 ::: {.case-header}
-[Ermittlungsakte · Case file reference · Excel for the web · In-person edition]{.kicker}
+[Ermittlungsakte · Case file reference · Excel for the web]{.kicker}
 
 # Tatort: Excel
 

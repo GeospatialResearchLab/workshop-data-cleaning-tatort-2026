@@ -1,6 +1,6 @@
 ---
 title: "Tatort: Excel"
-subtitle: "A Forensic Guide to Data Cleaning · In-Person Edition"
+subtitle: "A Forensic Guide to Data Cleaning · Excel for the Web"
 author: "Dr. Jessica Breen | American University | 2026"
 format:
   revealjs:
@@ -13,7 +13,7 @@ format:
     center: false
     transition: none
     embed-resources: true
-    footer: "TATORT: EXCEL · In-Person Edition · 45 minutes"
+    footer: "TATORT: EXCEL · A Forensic Guide to Data Cleaning"
     output-file: Slides.html
     include-after-body: theme/timer.html
     title-slide-attributes:

@@ -530,7 +530,7 @@ import json
 print("CHECKPOINTS", json.dumps(CP, indent=1))
 json.dump(CP, open(f"{OUT}/documents/instructor/checkpoints.json", "w"), indent=1)
 
-wb.save(f"{OUT}/documents/workshop_materials/Tatort_Evidence_InPerson.xlsx")
+wb.save(f"{OUT}/documents/workshop_materials/Tatort_Evidence.xlsx")
 
 # ============================================================================
 # Instructor workbook: cleaned data + evidence log

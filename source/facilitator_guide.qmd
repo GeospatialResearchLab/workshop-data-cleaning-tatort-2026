@@ -36,7 +36,7 @@ Five timed sprints. Each one: a 1–1.5 minute briefing, a 3–5 minute work per
 
 ## Before the Session
 
-[]{.box} **Upload the evidence** `Tatort_Evidence_InPerson.xlsx` to your OneDrive (office.com → Upload).
+[]{.box} **Upload the evidence** `Tatort_Evidence.xlsx` to your OneDrive (office.com → Upload).
 
 []{.box} **Make a view-only link:** in OneDrive, select the file → **Share** → link settings (the gear or "…") → *People in American University* (or *Anyone*) → **Can view** → Apply → **Copy link**. View-only is important: students can't accidentally edit your master, and they have to make their own copy.
 

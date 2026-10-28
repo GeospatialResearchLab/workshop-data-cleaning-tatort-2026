@@ -10,7 +10,7 @@ format:
 ---
 
 ::: {.case-header}
-[Ermittlungsakte Nr. 1311 · Evidence Card · In-person, 45 minutes]{.kicker}
+[Ermittlungsakte Nr. 1311 · Evidence Card · Excel for the web]{.kicker}
 
 # The Corrupted Episode List
 
