@@ -40,7 +40,9 @@ Five timed sprints. Each one: a 1–1.5 minute briefing, a 3–5 minute work per
 
 []{.box} **Make a view-only link:** in OneDrive, select the file → **Share** → link settings (the gear or "…") → *People in American University* (or *Anyone*) → **Can view** → Apply → **Copy link**. View-only is important: students can't accidentally edit your master, and they have to make their own copy.
 
-[]{.box} **Shorten it and make a QR code** (e.g. Chrome/Edge: right-click the page → *Create QR code*). Put both on the Pre-flight slide or on a printed sign at the door.
+[]{.box} **Make a short link** that's easy to type and read aloud (e.g. a bit.ly or AU short link ending in `/tatort-excel`). Students type it into their **laptop** browser, so keep it short and unambiguous: avoid characters like `l`/`1`/`I` and `O`/`0`.
+
+[]{.box} **Put the short link everywhere:** on the Pre-flight slide (edit the placeholder in `source/slides.qmd` and re-render), in the blank on the Evidence Card before printing, on the whiteboard, and in advance via Canvas, the registration email or the calendar invite so people can simply click it.
 
 []{.box} **Dry run** from a student-type account: open the link → **File → Create a Copy → Create a copy online** → check the copy opens in editing mode with all eight tabs. (The menu path was verified in editing mode on an AU account. Confirm it from a view-only link before the first session.)
 
@@ -108,7 +110,7 @@ On every "Your Turn" slide a countdown starts automatically in the top-right cor
 
 **4:00–9:00 · Pre-flight (4-min timer + 1 min slack)**
 
-- This is where in-person workshops lose 10 minutes. Have the link on screen as a QR code and a short URL, and in the room chat if there is one.
+- This is where in-person workshops lose 10 minutes. Show the short link on screen, read it aloud, and write it on the whiteboard. If you sent it in advance (Canvas, email), people can click it there instead.
 - The shared file is view-only. Everyone must make their own copy; if anyone sees "Editing" on the shared file itself, stop them (the Facilitator Guide explains how to set the link to view-only so this can't happen).
 - If the copy option is missing for someone, fallback: File → Download, then upload to their own OneDrive (office.com → Upload).
 - Duplicate tab = chain of custody. In the browser there's no "close without saving".

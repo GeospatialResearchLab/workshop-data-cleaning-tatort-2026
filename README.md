@@ -38,7 +38,8 @@ Instructor materials (facilitator guide, answer key, solved workbook, cleaned CS
 **Instructor**
 
 - Upload `Tatort_Evidence.xlsx` to your OneDrive and share a **view-only** link (students make their own copy in the room)
-- Add the link or a QR code to the Pre-flight slide, and print one Evidence Card per participant
+- Make a short link to it, add it to the Pre-flight slide and the Evidence Card, and send it to participants in advance (Canvas, email or calendar invite)
+- Print one Evidence Card per participant
 - Full checklist: [`documents/instructor/Facilitator_Guide.pdf`](documents/instructor/Facilitator_Guide.pdf)
 
 ---

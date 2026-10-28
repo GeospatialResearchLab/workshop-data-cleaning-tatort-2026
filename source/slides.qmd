@@ -82,10 +82,10 @@ Each sprint: **1-minute briefing → you work, timer on screen → checkpoint**.
 
 ## Pre-flight {.your-turn data-timer="240"}
 
-[⏱ 4 min]{.timer-static} [🔗 Evidence link: add your short link / QR code here before the session]{.behind}
+[⏱ 4 min]{.timer-static} [🔗 Evidence link: add your short link here before the session]{.behind}
 
 ::: {.action}
-Open the **evidence link** on screen. Signed in with your university account?
+Type the **evidence link** on screen into your laptop's browser. Signed in with your university account?
 :::
 
 ::: {.action}
@@ -103,7 +103,7 @@ Can't find a button? Type its name in Excel's **search box** at the top. AutoSav
 ::: notes
 **4:00–9:00 · Pre-flight (4-min timer + 1 min slack)**
 
-- This is where in-person workshops lose 10 minutes. Have the link on screen as a QR code and a short URL, and in the room chat if there is one.
+- This is where in-person workshops lose 10 minutes. Show the short link on screen, read it aloud, and write it on the whiteboard. If you sent it in advance (Canvas, email), people can click it there instead.
 - The shared file is view-only. Everyone must make their own copy; if anyone sees "Editing" on the shared file itself, stop them (the Facilitator Guide explains how to set the link to view-only so this can't happen).
 - If the copy option is missing for someone, fallback: File → Download, then upload to their own OneDrive (office.com → Upload).
 - Duplicate tab = chain of custody. In the browser there's no "close without saving".
