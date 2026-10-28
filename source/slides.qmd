@@ -505,10 +505,6 @@ You cleaned the four biggest leads. The **On Your Own** guide walks through the 
 **Scan the code** for the post-workshop survey. It's short, and it tells us what to improve.
 :::
 
-::: {.action}
-On the back of your Evidence Card: **one** technique from today you'll use on your own data, and **one** thing that's still a mystery.
-:::
-
 ::: {.small .muted}
 Survey link: forms.cloud.microsoft/r/kHFPesD57m. Materials, the On Your Own guide and the cheat sheet are on the workshop page. Questions? Fragen?
 :::
@@ -523,9 +519,9 @@ Post-workshop survey
 ::::
 
 ::: notes
-**44:00–45:00 · Post-workshop survey + exit ticket**
+**44:00–45:00 · Post-workshop survey**
 
 - Give people a minute with their phones before they pack up. Surveys done after people leave rarely get done.
 - The survey links are also on the back of the Evidence Card, so anyone who has to rush out can do it later.
-- People keep their Evidence Card: it has their checkpoint numbers, the workshop link and the survey links. The exit-ticket questions on the back are for their own reflection. If you want to hear their answers, invite them to add them to the post-workshop survey.
+- People keep their Evidence Card: it has their checkpoint numbers, the workshop link and the survey links.
 :::

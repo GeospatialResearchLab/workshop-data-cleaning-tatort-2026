@@ -105,7 +105,7 @@ Impossible <span class="blank"></span> First real date <span class="blank wide">
 ::: {.case-header}
 [Ermittlungsakte Nr. 1311 · Evidence Card · Back]{.kicker}
 
-# Surveys & Exit Ticket
+# Surveys
 :::
 
 ::: {.surveys}
@@ -124,12 +124,4 @@ Before we start. Scan with your phone, or go to **forms.cloud.microsoft/r/yXhf9P
 
 At the end of the workshop. Scan with your phone, or go to **forms.cloud.microsoft/r/kHFPesD57m**
 :::
-:::
-
-::: {.exit}
-### Before you go
-
-**One technique I'll use on my own data (and which data):** <span class="line"></span><span class="line"></span>
-
-**One thing that's still a mystery:** <span class="line"></span><span class="line"></span>
 :::

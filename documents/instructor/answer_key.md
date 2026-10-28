@@ -51,7 +51,7 @@ In the guide's order (Lead B removes 6 rows, so later counts are for 1,311 rows)
 | 21–28 | Sprint 3 · Hidden characters (1.5 · 5 · 0.5) |
 | 28–35 | Sprint 4 · Aliases (1.5 · 5 · 0.5) |
 | 35–42 | Sprint 5 · Dates (1.5 · 5 · 0.5) |
-| 42–45 | What's left, habits, exit ticket |
+| 42–45 | What's left, habits, post-workshop survey |
 
 ## Not yet tested live
 
