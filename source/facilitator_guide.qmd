@@ -23,7 +23,7 @@ Five timed sprints. Each one: a 1–1.5 minute briefing, a 3–5 minute work per
 
 | Time | Segment | Checkpoint to reveal |
 |---|---|---|
-| Arrival | "Before We Start" slide: pre-workshop survey on phones, sign in on laptops | |
+| Arrival | "Before We Start" slide: pre-workshop survey on phones; workshop page (`bit.ly/4jH0QRT`) and office.com sign-in on laptops | |
 | 0:00–4:00 | Welcome, how today works, the workbook | |
 | 4:00–9:00 | Pre-flight: open link, make a copy, duplicate tab | Everyone has `Working` |
 | 9:00–14:00 | Sprint 1 · Survey the scene | Clues from the room |
@@ -41,9 +41,11 @@ Five timed sprints. Each one: a 1–1.5 minute briefing, a 3–5 minute work per
 
 []{.box} **Make a view-only link:** in OneDrive, select the file → **Share** → link settings (the gear or "…") → *People in American University* (or *Anyone*) → **Can view** → Apply → **Copy link**. View-only is important: students can't accidentally edit your master, and they have to make their own copy.
 
-[]{.box} **Make a short link** that's easy to type and read aloud (e.g. a bit.ly or AU short link ending in `/tatort-excel`). Students type it into their **laptop** browser, so keep it short and unambiguous: avoid characters like `l`/`1`/`I` and `O`/`0`.
+[]{.box} **Add the evidence link to the workshop page:** paste the view-only link (or its short link, currently `bit.ly/4Bx688K`) as `evidenceLink` in the `WORKSHOP` block near the bottom of `index.html`, along with the date and room. Push, and check that **Open the evidence** on the live page opens the file.
 
-[]{.box} **Put the short link everywhere:** on the Pre-flight slide (edit the placeholder in `source/slides.qmd` and re-render), in the blank on the Evidence Card before printing, on the whiteboard, and in advance via Canvas, the registration email or the calendar invite so people can simply click it.
+[]{.box} **Check the workshop page short link:** `bit.ly/4jH0QRT` points to the GitHub Pages site. It's already on the "Before We Start" and Pre-flight slides and printed on the Evidence Card. If you make a new short link, change it in `source/slides.qmd` and `source/evidence_card.qmd` and re-render. Bitly links are case-sensitive and this one contains a zero, so read it out character by character.
+
+[]{.box} **Share the workshop page in advance** via Canvas, the registration email or the calendar invite, so people can simply click it. Write the short link on the whiteboard on the day.
 
 []{.box} **Dry run** from a student-type account: open the link → **File → Create a Copy → Create a copy online** → check the copy opens in editing mode with all eight tabs. (The menu path was verified in editing mode on an AU account. Confirm it from a view-only link before the first session.)
 
@@ -55,7 +57,7 @@ Five timed sprints. Each one: a 1–1.5 minute briefing, a 3–5 minute work per
 
 ## The Sprint Timer
 
-On every "Your Turn" slide a countdown starts automatically in the top-right corner. It turns red in the last minute and shows **TIME · CHECKPOINT** at zero. **Click it** to pause or resume. Press **T** to restart it. In the PDF the timer is replaced by a static label (e.g. *⏱ 5 min*).
+On every timed "Your Turn" slide (Pre-flight and Sprints 1–5) a countdown starts automatically in the top-right corner. It turns red in the last minute and shows **TIME · CHECKPOINT** at zero. **Click it** to pause or resume. Press **T** to restart it. In the PDF the timer is replaced by a static label (e.g. *⏱ 5 min*).
 
 ## Troubleshooting
 
