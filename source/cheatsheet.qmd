@@ -55,6 +55,7 @@ format:
 | Download a CSV | File → Export → Download as CSV UTF-8 |
 | Roll back a disaster | File → Version History |
 | Can't find a button? | Type its name in the search box at the top of Excel |
+| Excel in another language? | Translate formulas with the [Excel Translator](https://en.excel-translator.de/translator/) (en.excel-translator.de) |
 
 ## Handy Functions
 

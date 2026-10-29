@@ -53,6 +53,8 @@ Five timed sprints. Each one: a 1–1.5 minute briefing, a 3–5 minute work per
 
 []{.box} **Print** one Evidence Card per student (one page, with the survey QR codes at the bottom), and a few cheat sheets. The On Your Own guide is for afterwards: share the link, no need to print.
 
+[]{.box} **Language settings.** Participants whose Microsoft 365 account is set to another language will see translated menus and function names (for example `LÄNGE` instead of `LEN`), and may need `;` instead of `,` between formula arguments. Library loaner laptops don't fix this, because the setting belongs to the account, not the computer. The website asks participants to switch to English in advance. If someone's account hasn't switched in time, pair them with a neighbour for the session. For translating a single formula, the [Excel Translator](https://en.excel-translator.de/translator/) converts function names and separators between languages.
+
 []{.box} **Open** `Slides.html` in a browser, full screen. Press **S** for speaker view.
 
 ## The Sprint Timer
@@ -74,6 +76,7 @@ On every timed "Your Turn" slide (Pre-flight and Sprints 1–5) a countdown star
 | Dates show as numbers or `#####` | Home → Number Format → Short Date; widen the column. |
 | Counters give 0 | They're working in a `Catch_Up` sheet: replace `Working` in the counter with that sheet's name. |
 | Counter overwrote data | They pasted it into the Working tab. Undo (Ctrl/⌘ + Z), then paste it on the **Case_Log** tab, H4–H7. |
+| Menus or function names aren't in English · `#NAME?` on copied formulas | The participant's Microsoft 365 account is set to another language. Pair them with a neighbour for today, and suggest they switch their account to English before the next session. The [Excel Translator](https://en.excel-translator.de/translator/) can convert a formula into their language. |
 | Wrecked `Working` | Jump to the latest `Catch_Up` sheet. Their `Tatort_Evidence` is untouched, and File → Version History can roll back the whole file. |
 
 ## Slide-by-Slide Notes

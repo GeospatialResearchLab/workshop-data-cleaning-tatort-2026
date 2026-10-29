@@ -23,6 +23,7 @@ format:
 - All your helper columns live **inside the Table**. Type a new column name in the first empty header cell to the right of the table, press **Enter**, then enter the formula in the cell below. It fills the whole column.
 - In a Table, `[@Titel]` means "the `Titel` value in this row" and `[Titel]` means "the whole `Titel` column". You can click a cell instead of typing the reference: Excel writes it for you.
 - After each lead, add one row to `Case_Log`: what you found, what you did, how you checked it.
+- Excel in another language? Function names and separators differ (e.g. `LÄNGE` for `LEN`, `;` for `,`). The [Excel Translator](https://en.excel-translator.de/translator/) converts the formulas in this guide for you.
 
 ::: {.clue}
 The expected numbers assume you do the leads **in this order**. Lead B removes six rows, so counts before and after it differ by a little.

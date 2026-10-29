@@ -557,7 +557,7 @@ COUNTERS_DE = [
 ]
 assert len(FORMULAS_DE) == len(FORMULAS) and len(COUNTERS_DE) == len(COUNTERS)
 DE_EXAMPLE = '=GLÄTTEN(WECHSELN([@Titel]; UNIZEICHEN(160); " "))'
-os.makedirs(f"{OUT}/documents/german", exist_ok=True)
+os.makedirs(f"{OUT}/documents/German_language", exist_ok=True)
 comma = lambda f: f.replace(";", ",")
 fs["A1"] = "FORMELN – every formula for today's sprints, in German Excel"
 fs["A2"] = ("Two versions of each formula. Use column C if your Excel uses ; between arguments (German regional format), "
@@ -585,7 +585,7 @@ for i, (f, what) in enumerate(COUNTERS_DE, r0 + 1):
     put(i, f, what)
 widths(fs, [7, 22, 60, 60, 46])
 cl["E4"] = DE_EXAMPLE; cl["E4"].data_type = "s"
-wb.save(f"{OUT}/documents/german/Tatort_Evidence_DE.xlsx")
+wb.save(f"{OUT}/documents/German_language/Tatort_Evidence_DE.xlsx")
 # restore English (the in-memory workbook is not saved again, but keep it tidy)
 
 # ============================================================================

@@ -21,7 +21,7 @@ Every messy spreadsheet is a crime scene. In this hands-on workshop you'll inves
 - **On Your Own guide:** [`On_Your_Own.pdf`](documents/On_Your_Own.pdf)
 - **Cheat Sheet:** [`Cheatsheet.pdf`](documents/Cheatsheet.pdf)
 - **Workshop dataset:** [`Tatort_Evidence.xlsx`](documents/workshop_materials/Tatort_Evidence.xlsx) · [all participant materials (ZIP)](documents/workshop_materials.zip)
-- **German Excel versions:** [`german/`](documents/german/): the [dataset with German formulas](documents/german/Tatort_Evidence_DE.xlsx) (the Formulas sheet shows each formula with `;` and `,` separators side by side), the [On Your Own guide](documents/german/On_Your_Own_DE.pdf) and the [Cheat Sheet](documents/german/Cheatsheet_DE.pdf) with German formulas
+- **German Excel versions:** [`German_language/`](documents/German_language/): the [dataset with German formulas](documents/German_language/Tatort_Evidence_DE.xlsx) (the Formulas sheet shows each formula with `;` and `,` separators side by side), the [On Your Own guide](documents/German_language/On_Your_Own_DE.pdf) and the [Cheat Sheet](documents/German_language/Cheatsheet_DE.pdf) with German formulas
 - **Facilitator Guide:** [`Facilitator_Guide.pdf`](documents/instructor/Facilitator_Guide.pdf) · [answer key](documents/instructor/answer_key.md)
 
 ---
